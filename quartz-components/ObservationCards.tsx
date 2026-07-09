@@ -35,10 +35,12 @@ export default ((opts?: Options) => {
 
     .observation-card {
       min-height: 190px;
-      border: 0.5px solid rgba(237, 233, 225, 0.15);
+      border: 1px solid #d5d0c7;
+      border-top: 3px solid #3f634d;
       border-radius: 6px;
       padding: 18px;
-      background: transparent;
+      background: #ffffff;
+      color: #1a1917;
     }
 
     .observation-card h3 {
@@ -47,9 +49,19 @@ export default ((opts?: Options) => {
       font-size: 17px;
     }
 
+    .observation-card h3 a {
+      color: #315b70;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
     .observation-card p {
-      color: rgba(237, 233, 225, 0.68);
+      color: #494741;
       font-size: 13px;
+    }
+
+    .observation-card .meta {
+      color: #5b5953;
     }
 
     @media (max-width: 940px) {

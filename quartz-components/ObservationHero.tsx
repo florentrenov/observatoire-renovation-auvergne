@@ -12,9 +12,9 @@ export default ((opts?: Options) => {
       <section class="observation-hero">
         <img src={opts?.image ?? "/assets/hero-puy-de-dome-green.png"} alt="" />
         <div class="observation-hero-inner">
-          <span class="eyebrow">Auvergne · rénovation énergétique</span>
-          <h1>{opts?.title ?? "Lire la rénovation depuis le sol."}</h1>
-          <p>{opts?.summary}</p>
+          <span class="eyebrow">Auvergne · projets réels · sources publiques</span>
+          <h1>{opts?.title ?? "Observer les rénovations énergétiques réalisées en Auvergne."}</h1>
+          <p>{opts?.summary ?? "Documentation, analyse et mise en contexte de projets réels du territoire."}</p>
         </div>
       </section>
     )
