@@ -2329,3 +2329,255 @@ p {
     font-size: 34px;
   }
 }
+
+/* Professional observatory layer: comparable project sheets. */
+.passive-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 14px 0 22px;
+}
+
+.passive-filters span {
+  border: 1px solid #c9c4ba;
+  border-radius: 999px;
+  padding: 7px 11px;
+  background: #fff;
+  color: var(--card-secondary);
+  font-family: "IBM Plex Mono", Consolas, monospace;
+  font-size: 11px;
+}
+
+.tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 16px 0;
+}
+
+.tech-badges span {
+  border: 1px solid rgba(212, 161, 90, 0.42);
+  border-radius: 999px;
+  padding: 5px 9px;
+  background: rgba(237, 233, 225, 0.06);
+  color: rgba(237, 233, 225, 0.9);
+  font-family: "IBM Plex Mono", Consolas, monospace;
+  font-size: 10px;
+  line-height: 1.2;
+}
+
+.observation-card .tech-badges {
+  margin: 12px 0;
+}
+
+.observation-card .tech-badges span {
+  border-color: #b7afa3;
+  background: #f7f4ee;
+  color: #36573c;
+  font-weight: 600;
+}
+
+.project-card {
+  display: grid;
+  align-content: start;
+}
+
+.project-header {
+  display: grid;
+  gap: 0;
+}
+
+.project-identity,
+.executive-summary,
+.document-trust,
+.similar-projects {
+  margin-top: 34px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 20px;
+  background: rgba(237, 233, 225, 0.035);
+}
+
+.project-identity h2,
+.executive-summary h2,
+.document-trust h2,
+.similar-projects h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.project-identity dl,
+.document-trust dl {
+  display: grid;
+  gap: 0;
+  margin: 0;
+}
+
+.project-identity dl div,
+.document-trust dl div {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.34fr) minmax(0, 1fr);
+  gap: 18px;
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+}
+
+.project-identity dt,
+.document-trust dt {
+  color: var(--ocre-auvergne);
+  font-family: "IBM Plex Mono", Consolas, monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.project-identity dd,
+.document-trust dd {
+  margin: 0;
+  color: rgba(237, 233, 225, 0.84);
+}
+
+.executive-summary ul {
+  margin: 0;
+  padding-left: 20px;
+  color: rgba(237, 233, 225, 0.84);
+}
+
+.executive-summary li + li {
+  margin-top: 8px;
+}
+
+.project-network {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 28px 0 10px;
+}
+
+.project-network a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  border: 1px solid rgba(212, 161, 90, 0.44);
+  border-radius: 999px;
+  padding: 7px 11px;
+  color: var(--ocre-auvergne);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.project-network a:hover {
+  border-color: rgba(212, 161, 90, 0.78);
+  background: rgba(212, 161, 90, 0.08);
+  color: #f1c77f;
+}
+
+.actor-map {
+  display: grid;
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--line);
+}
+
+.actor-map article {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.34fr) minmax(0, 1fr);
+  gap: 16px;
+  padding: 13px 15px;
+  background: var(--basalte);
+}
+
+.actor-map span {
+  color: var(--ocre-auvergne);
+  font-family: "IBM Plex Mono", Consolas, monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.actor-map p {
+  color: rgba(237, 233, 225, 0.84);
+}
+
+.document-trust p {
+  margin-top: 14px;
+  color: rgba(237, 233, 225, 0.72);
+  font-size: 13px;
+}
+
+.similar-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.similar-grid a {
+  display: grid;
+  gap: 3px;
+  min-height: 112px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 14px;
+  color: var(--cendre);
+  text-decoration: none;
+}
+
+.similar-grid a:hover {
+  border-color: rgba(212, 161, 90, 0.62);
+  background: rgba(212, 161, 90, 0.06);
+}
+
+.similar-grid span,
+.similar-grid em {
+  color: var(--brume);
+  font-family: "IBM Plex Mono", Consolas, monospace;
+  font-size: 10px;
+  font-style: normal;
+}
+
+.similar-grid strong {
+  color: var(--cendre);
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+@media (max-width: 940px) {
+  .project-identity dl div,
+  .document-trust dl div,
+  .actor-map article {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}
+
+@media (max-width: 620px) {
+  .passive-filters {
+    gap: 6px;
+    margin-bottom: 18px;
+  }
+
+  .passive-filters span,
+  .tech-badges span {
+    font-size: 10px;
+  }
+
+  .project-identity,
+  .executive-summary,
+  .document-trust,
+  .similar-projects {
+    margin-top: 26px;
+    padding: 16px;
+  }
+
+  .project-network a {
+    min-height: 42px;
+    font-size: 12px;
+  }
+
+  .similar-grid {
+    grid-template-columns: 1fr;
+  }
+}
