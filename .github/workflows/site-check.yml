@@ -1,0 +1,50 @@
+name: Site checks
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Generate search index
+        run: npm run site:search
+
+      - name: Generate inventory
+        run: npm run site:inventory
+
+      - name: Check site
+        run: npm run site:check
+
+      - name: Check shell
+        run: npm run site:shell:check
+
+      - name: Check SEO
+        run: npm run site:seo:check
+
+      - name: Check project quality
+        run: npm run site:projects:quality
+
+      - name: Check relations
+        run: npm run site:relations
+
+      - name: Check watch contract
+        run: npm run site:veille:test
+
+      - name: Obsidian export dry-run
+        run: npm run site:obsidian:dry-run
+
+      - name: Media inventory
+        run: npm run site:media

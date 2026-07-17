@@ -1,53 +1,73 @@
 <!doctype html>
 <html lang="fr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Veille · Observatoire rénovation Auvergne</title>
     <link rel="stylesheet" href="../assets/styles.css">
-  </head>
+    <script src="../assets/veille-data.js" defer></script>
+    <script src="../assets/veille.js" defer></script>
+  
+    <meta name="description" content="Les éléments publiés sont sélectionnés, vérifiés et synthétisés avant mise en ligne. La collecte automatisée ou semi-automatisée reste soumise à...">
+    <link rel="canonical" href="https://florentrenov.github.io/observatoire-renovation-auvergne/veille/">
+    <meta property="og:title" content="Veille · Observatoire rénovation Auvergne">
+    <meta property="og:description" content="Les éléments publiés sont sélectionnés, vérifiés et synthétisés avant mise en ligne. La collecte automatisée ou semi-automatisée reste soumise à...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://florentrenov.github.io/observatoire-renovation-auvergne/veille/"></head>
   <body>
     <header class="site-header">
       <div class="nav-shell">
-        <a class="brand" href="../index.html">
-          <strong>Observatoire rénovation Auvergne</strong>
-          <span>relevé territorial · rénovation énergétique</span>
-        </a>
-        <nav class="nav-links" aria-label="Navigation principale"><a href="../index.html">Accueil</a><a href="../etudes-de-cas/index.html">Projets d'Auvergne</a><a href="../observatoire/index.html">Observatoire</a><a href="../methode/index.html">Méthode</a><a href="../acteurs/index.html">Acteurs</a><a href="../sources/index.html">Sources</a></nav>
+        <a class="brand" href="../index.html"><strong>Observatoire rénovation Auvergne</strong><span>veille · validation humaine · sources</span></a>
+        <nav class="nav-links" aria-label="Navigation principale"><a href="../index.html">Accueil</a><a href="../etudes-de-cas/index.html">Projets d'Auvergne</a><a href="../veille/index.html" aria-current="page">Veille</a><a href="../acteurs/index.html">Acteurs</a><a href="../sources/index.html">Sources</a><a href="../a-propos/index.html">À propos</a></nav>
       </div>
     </header>
 
     <main class="page">
       <section class="page-head compact">
         <div>
-          <span class="eyebrow">Flux chronologique</span>
-          <h1>Veille hebdomadaire</h1>
-          <p class="lead">La veille nourrit les territoires et la documentation. Elle reste un flux secondaire, lisible en ordre chronologique inversé.</p>
+          <span class="eyebrow">Veille éditoriale</span>
+          <h1>Veille récente</h1>
+          <p class="lead">Les éléments publiés sont sélectionnés, vérifiés et synthétisés avant mise en ligne. La collecte automatisée ou semi-automatisée reste soumise à validation humaine.</p>
         </div>
       </section>
 
-      <section class="section card-grid">
-        <article class="watch-card">
-          <span class="date">S30 · 2026</span>
-          <h3>Actualisation des aides et accompagnements</h3>
-          <p>Points à relier à MaPrimeRénov', France Rénov' et rénovation d'ampleur.</p>
-          <div class="tag-list"><span>#aides</span><span>#accompagnement</span><span>#puy-de-dome</span></div>
-        </article>
-        <article class="watch-card">
-          <span class="date">S29 · 2026</span>
-          <h3>Rénovation globale et maison individuelle</h3>
-          <p>Notes utiles pour le cas de maison des années 1970 chauffée aux granulés.</p>
-          <div class="tag-list"><span>#renovation-globale</span><span>#cas-concret</span></div>
-        </article>
-        <article class="watch-card">
-          <span class="date">S28 · 2026</span>
-          <h3>Structuration du graphe territorial</h3>
-          <p>Premiers liens entre Puy-de-Dôme, Clermont-Ferrand, DPE et accompagnement.</p>
-          <div class="tag-list"><span>#territoire</span><span>#documentation</span></div>
-        </article>
+      <section class="section">
+        <span class="eyebrow section-kicker">Filtrer la veille</span>
+        <div class="project-filters watch-filters" aria-label="Filtrer les publications de veille" data-watch-filters>
+          <fieldset>
+            <legend>Catégorie</legend>
+            <button type="button" data-watch-category="" aria-pressed="true">Toutes</button>
+            <button type="button" data-watch-category="réglementation" aria-pressed="false">Réglementation</button>
+            <button type="button" data-watch-category="aides" aria-pressed="false">Aides</button>
+            <button type="button" data-watch-category="données" aria-pressed="false">Données</button>
+            <button type="button" data-watch-category="territoire" aria-pressed="false">Territoires</button>
+            <button type="button" data-watch-category="projets" aria-pressed="false">Projets</button>
+            <button type="button" data-watch-category="acteurs" aria-pressed="false">Acteurs</button>
+          </fieldset>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading-row">
+          <div>
+            <span class="eyebrow section-kicker">Dernières synthèses</span>
+            <h2>Un fil prêt pour la publication progressive.</h2>
+          </div>
+        </div>
+        <div class="watch-feed" data-watch-list aria-live="polite"></div>
+      </section>
+
+      <section class="journey-callout">
+        <div>
+          <span class="eyebrow">Méthode de veille</span>
+          <h2>Ne pas publier automatiquement un contenu brut collecté.</h2>
+          <p>Le chemin cible est : sources officielles, collecte, note ou donnée structurée dans Obsidian, validation humaine, export, publication GitHub Pages.</p>
+        </div>
+        <div class="resource-links"><a href="../methode/index.html">Méthode</a><a href="../sources/index.html">Sources suivies</a><a href="../a-propos/index.html">À propos</a></div>
       </section>
     </main>
 
-    <footer class="site-footer"><div class="footer-inner"><div><strong>Observatoire rénovation Auvergne</strong><span>Projets observés · méthode · acteurs · sources</span></div><a href="../index.html">Accueil</a><a href="../methode/index.html">Méthode</a><a href="../sources/index.html">Sources</a><span class="footer-status">Version de travail · juillet 2026</span></div></footer>
+    <footer class="site-footer"><div class="footer-inner"><div><strong>Observatoire rénovation Auvergne</strong><span>Projets observés · veille · acteurs · méthode · sources</span></div><a href="../etudes-de-cas/index.html">Projets d'Auvergne</a><a href="index.html">Veille</a><a href="../methode/index.html">Méthode</a><a href="../a-propos/index.html">À propos</a></div></footer>
   </body>
 </html>
+

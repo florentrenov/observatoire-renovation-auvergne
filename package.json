@@ -1,0 +1,22 @@
+{
+  "name": "site-observatoire-v2",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "site:check": "node scripts/site-check.mjs && node scripts/site-metadata.mjs --check && node scripts/search-relevance.test.mjs",
+    "site:inventory": "node scripts/site-inventory.mjs",
+    "site:search": "node scripts/build-search-index.mjs",
+    "site:search:test": "node scripts/search-relevance.test.mjs",
+    "site:shell:check": "node scripts/site-shell.mjs --check",
+    "site:shell:write": "node scripts/site-shell.mjs --write",
+    "site:seo:check": "node scripts/site-metadata.mjs --check",
+    "site:seo:write": "node scripts/site-metadata.mjs --write",
+    "site:projects:quality": "node scripts/project-quality.mjs",
+    "site:relations": "node scripts/build-relations.mjs",
+    "site:veille:test": "node scripts/veille-contract.test.mjs",
+    "site:obsidian:dry-run": "node scripts/obsidian-export-dry-run.mjs --check",
+    "site:media": "node scripts/media-inventory.mjs",
+    "site:visual:check": "node scripts/visual-check.mjs",
+    "site:public:compare": "node scripts/public-compare.mjs"
+  }
+}

@@ -1,0 +1,443 @@
+{
+  "projectToActors": {
+    "PDD-004": [
+      {
+        "role": "Maître d'ouvrage",
+        "name": "Région Auvergne-Rhône-Alpes"
+      },
+      {
+        "role": "Opérateur public",
+        "name": "SPL OSER"
+      },
+      {
+        "role": "Entreprise / mandataire travaux",
+        "name": "CDR Construction"
+      },
+      {
+        "role": "Architecture",
+        "name": "CHM Architectes"
+      },
+      {
+        "role": "Bureau d'études",
+        "name": "SINTEC"
+      },
+      {
+        "role": "Exploitation",
+        "name": "IDEX"
+      }
+    ],
+    "PDD-003": [
+      {
+        "role": "Maître d'ouvrage",
+        "name": "Région Auvergne-Rhône-Alpes"
+      },
+      {
+        "role": "Opérateur public",
+        "name": "SPL OSER"
+      },
+      {
+        "role": "Entreprise / mandataire travaux",
+        "name": "TABARD Construction"
+      },
+      {
+        "role": "Architecture",
+        "name": "CHM Architectes"
+      },
+      {
+        "role": "Bureaux d'études",
+        "name": "LACLAUTRE Ingénierie"
+      },
+      {
+        "role": "Bureaux d'études",
+        "name": "ECIB Project"
+      },
+      {
+        "role": "Exploitation",
+        "name": "Vinci Facilities"
+      }
+    ],
+    "PDD-001": [
+      {
+        "role": "Maître d'ouvrage",
+        "name": "Région Auvergne-Rhône-Alpes"
+      },
+      {
+        "role": "Opérateur public",
+        "name": "SPL OSER"
+      },
+      {
+        "role": "Entreprise mentionnée",
+        "name": "Bouygues Bâtiment Sud-Est"
+      }
+    ],
+    "PDD-002": [
+      {
+        "role": "Maître d'ouvrage",
+        "name": "Département du Puy-de-Dôme"
+      },
+      {
+        "role": "Opérateur public",
+        "name": "SPL OSER"
+      }
+    ],
+    "PDD-005": [
+      {
+        "role": "Maître d'ouvrage",
+        "name": "Ville de Clermont-Ferrand"
+      },
+      {
+        "role": "Financement mentionné",
+        "name": "État, plan France Relance"
+      }
+    ]
+  },
+  "projectToTechniques": {
+    "PDD-004": [
+      "ITE",
+      "Biomasse",
+      "Réseau de chaleur",
+      "Double flux",
+      "Photovoltaïque",
+      "Isolation toiture",
+      "Isolation extérieure en laine de bois et PSE",
+      "Chaufferie préfabriquée aux granulés",
+      "Réseau de chaleur de site",
+      "Ventilation simple et double flux",
+      "Toiture végétalisée et photovoltaïque"
+    ],
+    "PDD-003": [
+      "ITE",
+      "Isolation plancher",
+      "Double flux",
+      "Photovoltaïque",
+      "Monitoring énergétique",
+      "Isolation extérieure selon les façades",
+      "Isolation des planchers bas",
+      "Ventilation double flux décentralisée",
+      "Équilibrage des réseaux de chauffage",
+      "Deux centrales photovoltaïques"
+    ],
+    "PDD-001": [
+      "ITE",
+      "Menuiseries",
+      "Protection solaire",
+      "Confort d'été",
+      "Double flux",
+      "GTB",
+      "Isolation toiture",
+      "Façade isolante à ossature bois",
+      "Menuiseries et protections solaires",
+      "Isolation des toitures-terrasses",
+      "Seize centrales double flux adiabatiques",
+      "Éclairage et GTC"
+    ],
+    "PDD-002": [
+      "Photovoltaïque",
+      "Monitoring énergétique",
+      "Technique à documenter",
+      "Production photovoltaïque annoncée à 55 MWh/an",
+      "Garantie de performance énergétique",
+      "Bouquet technique détaillé non publié"
+    ],
+    "PDD-005": [
+      "ITE",
+      "ITI",
+      "Isolation toiture",
+      "Menuiseries",
+      "Isolation extérieure des façades",
+      "Isolation intérieure du sous-sol",
+      "Isolation de la toiture",
+      "Doubles vitrages",
+      "Portes métalliques thermiques"
+    ]
+  },
+  "projectToSources": {
+    "PDD-004": [
+      {
+        "label": "Page projet SPL OSER",
+        "url": "https://spl-oser.fr/projets/lycee-professionnel-des-combrailles-a-saint-gervais-dauvergne/"
+      },
+      {
+        "label": "Fiche PDF",
+        "url": "https://spl-oser.fr/wp-content/uploads/2020/04/Fiche-SPL-Lyc%C3%A9%C3%A9-Combrailles-indA.pdf"
+      }
+    ],
+    "PDD-003": [
+      {
+        "label": "Page projet SPL OSER",
+        "url": "https://spl-oser.fr/projets/lycee-professionnel-de-rochefort-montagne/"
+      },
+      {
+        "label": "Fiche PDF",
+        "url": "https://spl-oser.fr/wp-content/uploads/2021/09/Rochefort-Montagne-ind-C.pdf"
+      }
+    ],
+    "PDD-001": [
+      {
+        "label": "Programme SPL OSER",
+        "url": "https://spl-oser.fr/actualites/lycee-la-fayette-a-clermont-ferrand/"
+      },
+      {
+        "label": "Inauguration",
+        "url": "https://spl-oser.fr/actualites/inauguration-du-lycee-la-fayette-a-clermont-ferrand/"
+      }
+    ],
+    "PDD-002": [
+      {
+        "label": "Actualité SPL OSER",
+        "url": "https://spl-oser.fr/actualites/rénovation-énergétique-du-college-teilhard-de-chardin-a-chamalieres/"
+      }
+    ],
+    "PDD-005": [
+      {
+        "label": "Ville de Clermont-Ferrand",
+        "url": "https://clermont-ferrand.fr/clermont-une-energie-positive"
+      }
+    ]
+  },
+  "projectToTerritory": {
+    "PDD-004": [
+      "Saint-Gervais-d'Auvergne",
+      "Puy-de-Dôme"
+    ],
+    "PDD-003": [
+      "Rochefort-Montagne",
+      "Puy-de-Dôme"
+    ],
+    "PDD-001": [
+      "Clermont-Ferrand",
+      "Puy-de-Dôme"
+    ],
+    "PDD-002": [
+      "Chamalières",
+      "Puy-de-Dôme"
+    ],
+    "PDD-005": [
+      "Clermont-Ferrand",
+      "Puy-de-Dôme"
+    ]
+  },
+  "actorToProjects": {
+    "Région Auvergne-Rhône-Alpes": [
+      "PDD-004",
+      "PDD-003",
+      "PDD-001"
+    ],
+    "SPL OSER": [
+      "PDD-004",
+      "PDD-003",
+      "PDD-001",
+      "PDD-002"
+    ],
+    "CDR Construction": [
+      "PDD-004"
+    ],
+    "CHM Architectes": [
+      "PDD-004",
+      "PDD-003"
+    ],
+    "SINTEC": [
+      "PDD-004"
+    ],
+    "IDEX": [
+      "PDD-004"
+    ],
+    "TABARD Construction": [
+      "PDD-003"
+    ],
+    "LACLAUTRE Ingénierie": [
+      "PDD-003"
+    ],
+    "ECIB Project": [
+      "PDD-003"
+    ],
+    "Vinci Facilities": [
+      "PDD-003"
+    ],
+    "Bouygues Bâtiment Sud-Est": [
+      "PDD-001"
+    ],
+    "Département du Puy-de-Dôme": [
+      "PDD-002"
+    ],
+    "Ville de Clermont-Ferrand": [
+      "PDD-005"
+    ],
+    "État, plan France Relance": [
+      "PDD-005"
+    ]
+  },
+  "techniqueToProjects": {
+    "ITE": [
+      "PDD-004",
+      "PDD-003",
+      "PDD-001",
+      "PDD-005"
+    ],
+    "Biomasse": [
+      "PDD-004"
+    ],
+    "Réseau de chaleur": [
+      "PDD-004"
+    ],
+    "Double flux": [
+      "PDD-004",
+      "PDD-003",
+      "PDD-001"
+    ],
+    "Photovoltaïque": [
+      "PDD-004",
+      "PDD-003",
+      "PDD-002"
+    ],
+    "Isolation toiture": [
+      "PDD-004",
+      "PDD-001",
+      "PDD-005"
+    ],
+    "Isolation extérieure en laine de bois et PSE": [
+      "PDD-004"
+    ],
+    "Chaufferie préfabriquée aux granulés": [
+      "PDD-004"
+    ],
+    "Réseau de chaleur de site": [
+      "PDD-004"
+    ],
+    "Ventilation simple et double flux": [
+      "PDD-004"
+    ],
+    "Toiture végétalisée et photovoltaïque": [
+      "PDD-004"
+    ],
+    "Isolation plancher": [
+      "PDD-003"
+    ],
+    "Monitoring énergétique": [
+      "PDD-003",
+      "PDD-002"
+    ],
+    "Isolation extérieure selon les façades": [
+      "PDD-003"
+    ],
+    "Isolation des planchers bas": [
+      "PDD-003"
+    ],
+    "Ventilation double flux décentralisée": [
+      "PDD-003"
+    ],
+    "Équilibrage des réseaux de chauffage": [
+      "PDD-003"
+    ],
+    "Deux centrales photovoltaïques": [
+      "PDD-003"
+    ],
+    "Menuiseries": [
+      "PDD-001",
+      "PDD-005"
+    ],
+    "Protection solaire": [
+      "PDD-001"
+    ],
+    "Confort d'été": [
+      "PDD-001"
+    ],
+    "GTB": [
+      "PDD-001"
+    ],
+    "Façade isolante à ossature bois": [
+      "PDD-001"
+    ],
+    "Menuiseries et protections solaires": [
+      "PDD-001"
+    ],
+    "Isolation des toitures-terrasses": [
+      "PDD-001"
+    ],
+    "Seize centrales double flux adiabatiques": [
+      "PDD-001"
+    ],
+    "Éclairage et GTC": [
+      "PDD-001"
+    ],
+    "Technique à documenter": [
+      "PDD-002"
+    ],
+    "Production photovoltaïque annoncée à 55 MWh/an": [
+      "PDD-002"
+    ],
+    "Garantie de performance énergétique": [
+      "PDD-002"
+    ],
+    "Bouquet technique détaillé non publié": [
+      "PDD-002"
+    ],
+    "ITI": [
+      "PDD-005"
+    ],
+    "Isolation extérieure des façades": [
+      "PDD-005"
+    ],
+    "Isolation intérieure du sous-sol": [
+      "PDD-005"
+    ],
+    "Isolation de la toiture": [
+      "PDD-005"
+    ],
+    "Doubles vitrages": [
+      "PDD-005"
+    ],
+    "Portes métalliques thermiques": [
+      "PDD-005"
+    ]
+  },
+  "territoryToProjects": {
+    "Saint-Gervais-d'Auvergne": [
+      "PDD-004"
+    ],
+    "Puy-de-Dôme": [
+      "PDD-004",
+      "PDD-003",
+      "PDD-001",
+      "PDD-002",
+      "PDD-005"
+    ],
+    "Rochefort-Montagne": [
+      "PDD-003"
+    ],
+    "Clermont-Ferrand": [
+      "PDD-001",
+      "PDD-005"
+    ],
+    "Chamalières": [
+      "PDD-002"
+    ]
+  },
+  "sourceToProjects": {
+    "https://spl-oser.fr/projets/lycee-professionnel-des-combrailles-a-saint-gervais-dauvergne/": [
+      "PDD-004"
+    ],
+    "https://spl-oser.fr/wp-content/uploads/2020/04/Fiche-SPL-Lyc%C3%A9%C3%A9-Combrailles-indA.pdf": [
+      "PDD-004"
+    ],
+    "https://spl-oser.fr/projets/lycee-professionnel-de-rochefort-montagne/": [
+      "PDD-003"
+    ],
+    "https://spl-oser.fr/wp-content/uploads/2021/09/Rochefort-Montagne-ind-C.pdf": [
+      "PDD-003"
+    ],
+    "https://spl-oser.fr/actualites/lycee-la-fayette-a-clermont-ferrand/": [
+      "PDD-001"
+    ],
+    "https://spl-oser.fr/actualites/inauguration-du-lycee-la-fayette-a-clermont-ferrand/": [
+      "PDD-001"
+    ],
+    "https://spl-oser.fr/actualites/rénovation-énergétique-du-college-teilhard-de-chardin-a-chamalieres/": [
+      "PDD-002"
+    ],
+    "https://clermont-ferrand.fr/clermont-une-energie-positive": [
+      "PDD-005"
+    ]
+  },
+  "warnings": []
+}

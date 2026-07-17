@@ -1,11 +1,19 @@
 <!doctype html>
 <html lang="fr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Recherche · Observatoire rénovation Auvergne</title>
     <link rel="stylesheet" href="../assets/styles.css">
-  </head>
+    <script src="../assets/search-index.js" defer></script>
+    <script src="../assets/search.js" defer></script>
+  
+    <meta name="description" content="Rechercher dans les pages publiques : projets observés, documentation, territoires, acteurs, sources et méthode.">
+    <link rel="canonical" href="https://florentrenov.github.io/observatoire-renovation-auvergne/recherche/">
+    <meta property="og:title" content="Recherche · Observatoire rénovation Auvergne">
+    <meta property="og:description" content="Rechercher dans les pages publiques : projets observés, documentation, territoires, acteurs, sources et méthode.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://florentrenov.github.io/observatoire-renovation-auvergne/recherche/"></head>
   <body>
     <header class="site-header">
       <div class="nav-shell">
@@ -13,24 +21,28 @@
           <strong>Observatoire rénovation Auvergne</strong>
           <span>relevé territorial · rénovation énergétique</span>
         </a>
-        <nav class="nav-links" aria-label="Navigation principale"><a href="../index.html">Accueil</a><a href="../etudes-de-cas/index.html">Projets d'Auvergne</a><a href="../observatoire/index.html">Observatoire</a><a href="../methode/index.html">Méthode</a><a href="../acteurs/index.html">Acteurs</a><a href="../sources/index.html">Sources</a></nav>
+        <nav class="nav-links" aria-label="Navigation principale"><a href="../index.html">Accueil</a><a href="../etudes-de-cas/index.html">Projets d'Auvergne</a><a href="../veille/index.html">Veille</a><a href="../acteurs/index.html">Acteurs</a><a href="../sources/index.html">Sources</a><a href="../a-propos/index.html">À propos</a></nav>
       </div>
     </header>
 
     <main class="page">
       <section class="page-head compact">
         <div>
-          <span class="eyebrow">Recherche Quartz</span>
+          <span class="eyebrow">Recherche publique</span>
           <h1>Interroger l'observatoire</h1>
-          <p class="lead">Dans Quartz, cette page utilisera la recherche plein texte. Dans cette maquette statique, elle montre seulement l'emplacement et la logique d'usage.</p>
-          <form class="search-box">
-            <input type="search" placeholder="DPE, Puy-de-Dôme, MaPrimeRénov'..." aria-label="Recherche">
-            <button class="button" type="button">Rechercher</button>
+          <p class="lead">Rechercher dans les pages publiques : projets observés, documentation, territoires, acteurs, sources et méthode.</p>
+          <form class="search-box" data-search-form>
+            <label class="sr-only" for="site-search">Recherche</label>
+            <input id="site-search" type="search" placeholder="DPE, Puy-de-Dôme, MaPrimeRénov'..." autocomplete="off" data-search-input>
+            <button class="button" type="submit">Rechercher</button>
           </form>
+          <p class="search-status" aria-live="polite" data-search-status></p>
         </div>
       </section>
+      <section class="section search-results" aria-label="Résultats de recherche" data-search-results></section>
     </main>
 
     <footer class="site-footer"><div class="footer-inner"><div><strong>Observatoire rénovation Auvergne</strong><span>Projets observés · méthode · acteurs · sources</span></div><a href="../index.html">Accueil</a><a href="../methode/index.html">Méthode</a><a href="../sources/index.html">Sources</a><span class="footer-status">Version de travail · juillet 2026</span></div></footer>
   </body>
 </html>
+

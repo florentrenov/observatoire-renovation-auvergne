@@ -150,7 +150,7 @@ const cases = [
     performance: "La baisse de 38 % et la production photovoltaïque sont des objectifs avant livraison. Aucun bilan de consommation n'est disponible.",
     lesson: "Les objectifs d'une opération en cours ne sont pas des résultats obtenus.",
     similar: ["PDD-001", "PDD-003"],
-    sources: [["Actualité SPL OSER", "https://spl-oser.fr/actualites/renovation-energetique-du-college-teilhard-de-chardin-a-chamalieres/"]]
+    sources: [["Actualité SPL OSER", "https://spl-oser.fr/actualites/rénovation-énergétique-du-college-teilhard-de-chardin-a-chamalieres/"]]
   },
   {
     id: "PDD-005",
@@ -200,8 +200,12 @@ function techBadges(items) {
   return `<div class="tech-badges" aria-label="Techniques observées">${items.map(v => `<span>${v}</span>`).join("")}</div>`
 }
 
+function slugActor(value) {
+  return value.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/œ/g, "oe").replace(/æ/g, "ae").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
+}
+
 function actorGroups(groups) {
-  return `<div class="actor-map">${groups.map(group => `<article><span>${group.role}</span><p>${group.names.join(" · ")}</p></article>`).join("")}</div>`
+  return `<div class="actor-map">${groups.map(group => `<article><span>${group.role}</span><p>${group.names.map(name => `<a href="../../acteurs/${slugActor(name)}/index.html">${name}</a>`).join(" · ")}</p></article>`).join("")}</div>`
 }
 
 function sourceLedger(c) {
@@ -214,10 +218,50 @@ function similarProjects(c) {
   return `<section class="similar-projects" aria-labelledby="similar-title"><h2 id="similar-title">Projets similaires</h2><div class="similar-grid">${items.map(item => `<a href="../${item.slug}/index.html"><span>${item.id} · ${item.category}</span><strong>${item.title}</strong><em>${item.place}</em></a>`).join("")}</div></section>`
 }
 
-function listCases() {
+function matchesFilters(c, filters) {
+  if (filters.category && c.category !== filters.category) return false
+  if (filters.badge && !c.badges.includes(filters.badge)) return false
+  if (filters.documentStatus && c.documentStatus !== filters.documentStatus) return false
+  return true
+}
+
+function renderCaseList(items) {
   const el = document.querySelector("[data-case-list]")
   if (!el) return
-  el.innerHTML = cases.map(c => `<article class="observation-card project-card"><div class="case-meta"><span>${c.id}</span><span>${c.status}</span></div><h2><a href="${c.slug}/index.html">${c.title}</a></h2><p class="case-place">${c.place} · ${c.owner}</p>${techBadges(c.badges.slice(0, 5))}<p>${c.summary}</p><ul class="metric-list">${c.metrics.map(v=>`<li>${v}</li>`).join("")}</ul><p class="case-lesson"><strong>À retenir</strong>${c.lesson}</p><a class="text-action" href="${c.slug}/index.html">Découvrir le projet →</a></article>`).join("")
+  el.innerHTML = items.map(c => `<article class="observation-card project-card"><div class="case-meta"><span>${c.id}</span><span>${c.status}</span></div><h2><a href="${c.slug}/index.html">${c.title}</a></h2><p class="case-place">${c.place} · ${c.owner}</p>${techBadges(c.badges.slice(0, 5))}<p>${c.summary}</p><ul class="metric-list">${c.metrics.map(v=>`<li>${v}</li>`).join("")}</ul><p class="case-lesson"><strong>À retenir</strong>${c.lesson}</p><a class="text-action" href="${c.slug}/index.html">Découvrir le projet →</a></article>`).join("") || `<p class="notice">Aucun projet documenté ne correspond à ce filtre.</p>`
+}
+
+function listCases() {
+  const filters = document.querySelector("[data-case-filters]")
+  const status = document.querySelector("[data-case-status]")
+  const active = { category: "", badge: "", documentStatus: "" }
+  const apply = () => {
+    const visible = cases.filter(c => matchesFilters(c, active))
+    renderCaseList(visible)
+    if (status) status.textContent = `${visible.length} projet${visible.length > 1 ? "s" : ""} affiché${visible.length > 1 ? "s" : ""}.`
+  }
+  const resetGroup = group => {
+    filters.querySelectorAll(`button[data-filter-group="${group}"]`).forEach(item => {
+      item.setAttribute("aria-pressed", item.dataset.filterValue === "" ? "true" : "false")
+    })
+  }
+  if (filters) {
+    filters.addEventListener("click", event => {
+      const reset = event.target.closest("[data-filter-reset]")
+      if (reset) {
+        Object.keys(active).forEach(group => { active[group] = ""; resetGroup(group) })
+        apply()
+        return
+      }
+      const button = event.target.closest("button[data-filter-group]")
+      if (!button) return
+      const group = button.dataset.filterGroup
+      active[group] = button.dataset.filterValue || ""
+      filters.querySelectorAll(`button[data-filter-group="${group}"]`).forEach(item => item.setAttribute("aria-pressed", item === button ? "true" : "false"))
+      apply()
+    })
+  }
+  apply()
 }
 
 function showCase() {

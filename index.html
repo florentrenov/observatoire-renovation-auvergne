@@ -1,11 +1,20 @@
 <!doctype html>
 <html lang="fr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Observatoire rénovation Auvergne</title>
     <link rel="stylesheet" href="assets/styles.css">
-  </head>
+    <script src="assets/veille-data.js" defer></script>
+    <script src="assets/veille.js" defer></script>
+  
+    <meta name="description" content="Observatoire territorial de la rénovation énergétique. Le site rassemble des projets documentés, des repères pédagogiques, une veille structurée, des...">
+    <link rel="canonical" href="https://florentrenov.github.io/observatoire-renovation-auvergne/">
+    <meta property="og:title" content="Observatoire rénovation Auvergne">
+    <meta property="og:description" content="Observatoire territorial de la rénovation énergétique. Le site rassemble des projets documentés, des repères pédagogiques, une veille structurée, des...">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://florentrenov.github.io/observatoire-renovation-auvergne/">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Observatoire rénovation Auvergne","url":"https://florentrenov.github.io/observatoire-renovation-auvergne/","description":"Observatoire territorial de la rénovation énergétique. Le site rassemble des projets documentés, des repères pédagogiques, une veille structurée, des..."}</script></head>
   <body>
     <header class="site-header">
       <div class="nav-shell">
@@ -13,7 +22,7 @@
           <strong>Observatoire rénovation Auvergne</strong>
           <span>relevé territorial · rénovation énergétique</span>
         </a>
-        <nav class="nav-links" aria-label="Navigation principale"><a href="index.html" aria-current="page">Accueil</a><a href="etudes-de-cas/index.html">Projets d'Auvergne</a><a href="observatoire/index.html">Observatoire</a><a href="techniques/index.html">Techniques</a><a href="territoires/index.html">Territoires</a><a href="analyses/index.html">Analyses</a><a href="methode/index.html">Méthode</a><a href="acteurs/index.html">Acteurs</a><a href="sources/index.html">Sources</a></nav>
+        <nav class="nav-links" aria-label="Navigation principale"><a href="index.html" aria-current="page">Accueil</a><a href="etudes-de-cas/index.html">Projets d'Auvergne</a><a href="veille/index.html">Veille</a><a href="acteurs/index.html">Acteurs</a><a href="sources/index.html">Sources</a><a href="a-propos/index.html">À propos</a></nav>
       </div>
     </header>
 
@@ -24,15 +33,15 @@
           <div class="hero-copy">
             <span class="eyebrow">Auvergne · projets réels · sources publiques</span>
             <h1 class="hero-title">Observer les rénovations énergétiques réalisées en Auvergne.</h1>
-            <p class="lead"><strong>Observatoire territorial de la rénovation énergétique.</strong> Documentation, analyse et mise en contexte de projets réels du territoire.</p>
+            <p class="lead"><strong>Observatoire territorial de la rénovation énergétique.</strong> Le site rassemble des projets documentés, des repères pédagogiques, une veille structurée, des acteurs identifiés et des sources vérifiables.</p>
             <p class="hero-signature">Lire la rénovation depuis le sol.</p>
           </div>
           <div class="hero-register">
             <div class="signal-line" aria-label="Ordre de lecture de l'observatoire">
               <span>Projets d'Auvergne</span>
-              <span>Méthode</span>
-              <span>Acteurs identifiés</span>
-              <span>Sources</span>
+              <span>Cinq univers</span>
+              <span>Veille récente</span>
+              <span>Méthode et sources</span>
             </div>
             <span class="next-hint">collection territoriale · en enrichissement continu</span>
           </div>
@@ -44,27 +53,29 @@
           <span>Version de travail</span>
           <p>Contenus en cours de vérification avant publication.</p>
         </div>
+
         <section class="home-band projects-feature">
           <div class="projects-feature-copy">
             <span class="eyebrow section-kicker">Pilier de l'observatoire</span>
             <h2>Projets d'Auvergne</h2>
             <p class="projects-feature-lead">Des rénovations énergétiques observées et documentées sur le territoire auvergnat.</p>
-            <p>La collection rassemble plusieurs opérations. Chaque fiche présente les objectifs, les techniques, les acteurs et les résultats annoncés, en distinguant estimations et résultats effectivement publiés.</p>
+            <p>Chaque fiche présente les objectifs, les techniques, les acteurs, les performances annoncées et les limites documentaires. Les projets sont la matière principale du site ; les ressources pédagogiques servent à les comprendre.</p>
             <a class="projects-feature-action" href="etudes-de-cas/index.html">Explorer les projets →</a>
           </div>
           <div class="projects-feature-register" aria-label="Contenu des fiches projets">
             <span>Objectifs</span>
             <span>Techniques</span>
             <span>Acteurs</span>
-            <span>Performances annoncées</span>
+            <span>Territoires</span>
             <span>Sources publiques</span>
           </div>
         </section>
+
         <section class="home-band universe-intro">
           <div>
-            <span class="eyebrow section-kicker">Comprendre les projets</span>
-            <h2>Les ressources techniques servent à lire les opérations observées.</h2>
-            <p>Diagnostic, financement, réglementation et territoire donnent le contexte nécessaire pour interpréter les projets sans les confondre avec les réalisations de l'auteur.</p>
+            <span class="eyebrow section-kicker">Cinq chemins de lecture</span>
+            <h2>Comprendre les projets sans multiplier les portes d'entrée.</h2>
+            <p>Les univers pédagogiques remplacent les anciennes cartes de ressources. Ils rattachent les fiches techniques, territoriales et méthodologiques à cinq besoins de lecture simples.</p>
           </div>
           <div class="universe-grid" aria-label="Les cinq univers du site">
             <article class="universe-card theme-understand">
@@ -72,127 +83,71 @@
               <span class="path-icon"><svg viewBox="0 0 24 24"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M8 20V7a3 3 0 0 0-3-3"/></svg></span>
               <h3>Comprendre</h3>
               <p>Pourquoi rénover, comment les politiques ont évolué et quels repères retenir.</p>
-              <a href="comprendre/index.html">Découvrir les repères <span aria-hidden="true">→</span></a>
+              <div class="universe-links"><a href="comprendre/pourquoi-renover/index.html">Pourquoi rénover ?</a><a href="comprendre/histoire-renovation-energetique/index.html">Histoire</a><a href="comprendre/chiffres-cles/index.html">Chiffres clés</a></div>
+              <a class="universe-cta" href="comprendre/index.html">Découvrir les repères →</a>
             </article>
             <article class="universe-card theme-diagnostic">
               <span class="universe-step">02</span>
               <span class="path-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M16 16l4 4"/><path d="M8 11h6"/></svg></span>
               <h3>Diagnostiquer</h3>
-              <p>Lire un DPE, comprendre un audit énergétique et analyser le bâti.</p>
-              <a href="documentation/dpe/index.html">Commencer par le DPE <span aria-hidden="true">→</span></a>
+              <p>Comprendre l'état du bâtiment avant de décider des travaux.</p>
+              <div class="universe-links"><a href="documentation/dpe/index.html">DPE</a><a href="documentation/audit-energetique/index.html">Audit énergétique</a><span>Analyse du bâti à documenter</span></div>
+              <a class="universe-cta" href="documentation/dpe/index.html">Accéder au diagnostic →</a>
             </article>
             <article class="universe-card theme-finance">
               <span class="universe-step">03</span>
               <span class="path-icon"><svg viewBox="0 0 24 24"><path d="M6 7h12v12H6z"/><path d="M9 7V5h6v2"/><path d="M9 12h6"/><path d="M9 15h4"/></svg></span>
               <h3>Financer</h3>
-              <p>Articuler ANAH, MaPrimeRénov', CEE et accompagnement sans promettre un montant.</p>
-              <a href="financement/index.html">Lire le parcours financement <span aria-hidden="true">→</span></a>
+              <p>Comprendre les aides, l'accompagnement et les vérifications nécessaires.</p>
+              <div class="universe-links"><a href="documentation/maprimerenov/index.html">MaPrimeRénov'</a><a href="documentation/cee/index.html">CEE</a><a href="documentation/anah/index.html">ANAH</a><a href="documentation/france-renov/index.html">France Rénov'</a></div>
+              <a class="universe-cta" href="financement/index.html">Explorer les financements →</a>
             </article>
             <article class="universe-card theme-journey">
               <span class="universe-step">04</span>
               <span class="path-icon"><svg viewBox="0 0 24 24"><path d="M4 18h16"/><path d="M6 18V9l6-4 6 4v9"/><path d="M9 18v-6h6v6"/></svg></span>
               <h3>Rénover</h3>
-              <p>Passer du diagnostic à une stratégie cohérente, puis aux projets observés.</p>
-              <a href="parcours-renovation/index.html">Suivre les étapes <span aria-hidden="true">→</span></a>
+              <p>Passer du diagnostic à une stratégie de travaux cohérente.</p>
+              <div class="universe-links"><a href="parcours-renovation/index.html">Parcours</a><a href="documentation/renovation-globale/index.html">Rénovation globale</a><a href="maison-individuelle/index.html">Maison individuelle</a><a href="coproprietes/index.html">Copropriétés</a></div>
+              <a class="universe-cta" href="parcours-renovation/index.html">Préparer une rénovation →</a>
             </article>
             <article class="universe-card theme-territory">
               <span class="universe-step">05</span>
               <span class="path-icon"><svg viewBox="0 0 24 24"><path d="M4 7l8-3 8 3v12l-8 3-8-3z"/><path d="M12 4v18"/><path d="M4 7l8 3 8-3"/></svg></span>
               <h3>Observer le territoire</h3>
-              <p>Relier le Puy-de-Dôme, la métropole, les communes, les acteurs et les données.</p>
-              <a href="territoires/puy-de-dome/index.html">Explorer le territoire <span aria-hidden="true">→</span></a>
+              <p>Lire les projets, les données, les acteurs et les spécificités locales.</p>
+              <div class="universe-links"><a href="territoires/puy-de-dome/index.html">Puy-de-Dôme</a><a href="territoires/clermont-ferrand/index.html">Clermont-Ferrand</a><a href="territoires/clermont-auvergne-metropole/index.html">Métropole</a><a href="donnees-dpe-puy-de-dome/index.html">Données DPE</a></div>
+              <a class="universe-cta" href="territoires/puy-de-dome/index.html">Explorer le territoire →</a>
             </article>
           </div>
         </section>
 
-        <section class="home-band">
-          <span class="eyebrow section-kicker">Ressources essentielles</span>
-          <h2>Les premières lectures qui donnent une vue d'ensemble.</h2>
-          <div class="white-ledger">
-            <article class="white-card theme-diagnostic">
-              <span class="meta">DIAGNOSTIQUER · PREMIER REPÈRE</span>
-              <div>
-                <h3>DPE</h3>
-                <p>Comprendre ce que mesure le diagnostic et ce qu'il ne suffit pas à décider.</p>
-              </div>
-              <a href="documentation/dpe/index.html">Lire la fiche DPE →</a>
-            </article>
-            <article class="white-card theme-diagnostic">
-              <span class="meta">DIAGNOSTIQUER · SCÉNARIOS</span>
-              <div>
-                <h3>Audit énergétique</h3>
-                <p>Passer du constat à plusieurs scénarios de travaux ordonnés.</p>
-              </div>
-              <a href="documentation/audit-energetique/index.html">Comprendre l'audit →</a>
-            </article>
-            <article class="white-card theme-finance">
-              <span class="meta">FINANCEMENT · AIDES</span>
-              <div>
-                <h3>Financer dans le Puy-de-Dôme</h3>
-                <p>Relier aides nationales, accompagnement et vérifications locales.</p>
-              </div>
-              <a href="financement/index.html">Lire le parcours financement →</a>
-            </article>
-            <article class="white-card theme-habitat">
-              <span class="meta">PROJET D'AUVERGNE · PROTOTYPE</span>
-              <div>
-                <h3>Maison des années 70</h3>
-                <p>Un prototype éditorial pour relier bâti, chauffage, diagnostic et décisions sans revendiquer une opération réelle.</p>
-              </div>
-              <a href="etudes-de-cas/maison-annees-70/index.html">Consulter la fiche →</a>
-            </article>
-            <article class="white-card theme-actors">
-              <span class="meta">MÉTHODE · FIABILITÉ</span>
-              <div>
-                <h3>Sources et méthode</h3>
-                <p>Voir les organismes suivis, les limites documentaires et la méthode de vérification.</p>
-              </div>
-              <a href="sources/index.html">Consulter les sources →</a>
-            </article>
-            <article class="white-card theme-territory">
-              <span class="meta">TERRITOIRE · NOEUD CENTRAL</span>
-              <div>
-                <h3>Puy-de-Dôme</h3>
-                <p>Le territoire relie les fiches, les acteurs, les sources et les projets observés.</p>
-              </div>
-              <a href="territoires/puy-de-dome/index.html">Ouvrir le relevé territorial →</a>
-            </article>
-            <article class="white-card theme-renovation">
-              <span class="meta">DOC · DOC-2026-001</span>
-              <div>
-                <h3>Rénovation globale</h3>
-                <p>La fiche pivot du passage du diagnostic aux travaux cohérents.</p>
-              </div>
-              <a href="documentation/renovation-globale/index.html">Lire la fiche →</a>
-            </article>
-          </div>
-        </section>
-
-        <section class="home-band">
-          <span class="eyebrow section-kicker">Repères de confiance</span>
-          <div class="editorial-strip">
-            <article class="territory-callout">
-              <span class="eyebrow">Pourquoi faire confiance au site ?</span>
-              <h3>Des sources identifiées, des limites visibles.</h3>
-              <p>L'observatoire distingue les informations vérifiées, les éléments issus des notes documentaires et les données territoriales encore à collecter.</p>
-              <p><a href="sources/index.html">Lire la méthode des sources →</a></p>
-            </article>
-            <div class="trust-panel">
-              <span class="eyebrow">Organismes de référence suivis</span>
-              <div class="source-badges" aria-label="Sources institutionnelles suivies">
-                <span>ADEME</span>
-                <span>ANAH</span>
-                <span>France Rénov'</span>
-                <span>INSEE</span>
-                <span>data.gouv.fr</span>
-              </div>
-              <dl class="verification-ledger">
-                <div><dt>Source</dt><dd>indiquée dans les fiches lorsqu'elle est disponible</dd></div>
-                <div><dt>Dernière vérification</dt><dd>date affichée lorsqu'elle est connue ; sinon à renseigner</dd></div>
-                <div><dt>Données locales</dt><dd>signalées comme futures tant qu'elles ne sont pas consolidées</dd></div>
-              </dl>
-              <a class="text-action" href="sources/index.html">Voir le registre des sources →</a>
+        <section class="home-band watch-preview-section">
+          <div class="section-heading-row">
+            <div>
+              <span class="eyebrow section-kicker">Veille récente</span>
+              <h2>Un futur fil d'actualités vérifiées, pas un flux brut.</h2>
+              <p>La veille éditoriale prépare les synthèses issues de sources suivies. Les éléments publiés doivent être sélectionnés, vérifiés et validés avant mise en ligne.</p>
             </div>
+            <a class="text-action" href="veille/index.html">Voir toute la veille →</a>
+          </div>
+          <div class="watch-feed compact" data-watch-preview></div>
+        </section>
+
+        <section class="home-band about-strip">
+          <article class="territory-callout">
+            <span class="eyebrow">À propos du projet</span>
+            <h3>Un observatoire public, une méthode de travail, un porteur identifié.</h3>
+            <p>Le site est conçu comme une couche publique au-dessus d'un système documentaire Obsidian. La rubrique À propos précise progressivement le projet, le parcours de Florent et les limites de publication.</p>
+            <p><a href="a-propos/index.html">Lire la présentation →</a></p>
+          </article>
+          <div class="trust-panel">
+            <span class="eyebrow">Repères de confiance</span>
+            <dl class="verification-ledger">
+              <div><dt>Méthode</dt><dd>sélection, vérification, niveaux documentaires et limites</dd></div>
+              <div><dt>Sources</dt><dd>organismes suivis, données officielles et sources territoriales</dd></div>
+              <div><dt>Acteurs</dt><dd>réseau extrait des projets documentés, sans rôle inventé</dd></div>
+            </dl>
+            <div class="resource-links"><a href="methode/index.html">Méthode</a><a href="sources/index.html">Sources</a><a href="acteurs/index.html">Acteurs</a></div>
           </div>
         </section>
       </div>
@@ -202,13 +157,15 @@
       <div class="footer-inner">
         <div>
           <strong>Observatoire rénovation Auvergne</strong>
-          <span>Projets observés · méthode · acteurs · sources</span>
+          <span>Projets observés · veille · acteurs · méthode · sources</span>
         </div>
-        <a href="index.html">Accueil</a>
+        <a href="etudes-de-cas/index.html">Projets d'Auvergne</a>
+        <a href="veille/index.html">Veille</a>
         <a href="methode/index.html">Méthode</a>
-        <a href="sources/index.html">Sources</a>
-        <span class="footer-status">Version de travail · juillet 2026</span>
+        <a href="a-propos/index.html">À propos</a>
       </div>
     </footer>
   </body>
 </html>
+
+

@@ -1,17 +1,23 @@
 <!doctype html>
 <html lang="fr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Projets d'Auvergne · Observatoire territorial</title>
     <link rel="stylesheet" href="../assets/styles.css">
     <script src="../assets/observatoire.js" defer></script>
-  </head>
+  
+    <meta name="description" content="Des rénovations énergétiques observées et documentées à partir de sources publiques, sans confondre objectifs contractuels, estimations et résultats mesurés.">
+    <link rel="canonical" href="https://florentrenov.github.io/observatoire-renovation-auvergne/etudes-de-cas/">
+    <meta property="og:title" content="Projets d'Auvergne · Observatoire territorial">
+    <meta property="og:description" content="Des rénovations énergétiques observées et documentées à partir de sources publiques, sans confondre objectifs contractuels, estimations et résultats mesurés.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://florentrenov.github.io/observatoire-renovation-auvergne/etudes-de-cas/"></head>
   <body class="page-theme theme-journey">
     <header class="site-header">
       <div class="nav-shell">
         <a class="brand" href="../index.html"><strong>Observatoire rénovation Auvergne</strong><span>projets observés · sources publiques</span></a>
-        <nav class="nav-links" aria-label="Navigation principale"><a href="../index.html">Accueil</a><a href="../etudes-de-cas/index.html" aria-current="page">Projets d'Auvergne</a><a href="../observatoire/index.html">Observatoire</a><a href="../methode/index.html">Méthode</a><a href="../acteurs/index.html">Acteurs</a><a href="../sources/index.html">Sources</a></nav>
+        <nav class="nav-links" aria-label="Navigation principale"><a href="../index.html">Accueil</a><a href="../etudes-de-cas/index.html" aria-current="page">Projets d'Auvergne</a><a href="../veille/index.html">Veille</a><a href="../acteurs/index.html">Acteurs</a><a href="../sources/index.html">Sources</a><a href="../a-propos/index.html">À propos</a></nav>
       </div>
     </header>
     <main class="page">
@@ -28,15 +34,39 @@
       </section>
       <section class="section">
         <span class="eyebrow section-kicker">Opérations documentées</span>
-        <div class="passive-filters" aria-label="Filtres visuels en préparation">
-          <span>Enseignement</span>
-          <span>Logement</span>
-          <span>Tertiaire</span>
-          <span>Collectivité</span>
-          <span>Techniques</span>
-          <span>Acteurs</span>
+        <div class="project-filters" aria-label="Filtrer les projets observés" data-case-filters>
+          <fieldset>
+            <legend>Type de bâtiment</legend>
+            <button type="button" data-filter-group="category" data-filter-value="" aria-pressed="true">Tous</button>
+            <button type="button" data-filter-group="category" data-filter-value="Enseignement" aria-pressed="false">Enseignement</button>
+            <button type="button" data-filter-group="category" data-filter-value="Collectivité" aria-pressed="false">Collectivité</button>
+          </fieldset>
+          <fieldset>
+            <legend>Techniques documentées</legend>
+            <button type="button" data-filter-group="badge" data-filter-value="" aria-pressed="true">Toutes</button>
+            <button type="button" data-filter-group="badge" data-filter-value="ITE" aria-pressed="false">ITE</button>
+            <button type="button" data-filter-group="badge" data-filter-value="Photovoltaïque" aria-pressed="false">Photovoltaïque</button>
+            <button type="button" data-filter-group="badge" data-filter-value="Double flux" aria-pressed="false">Double flux</button>
+          </fieldset>
+          <fieldset>
+            <legend>Statut documentaire</legend>
+            <button type="button" data-filter-group="documentStatus" data-filter-value="" aria-pressed="true">Tous</button>
+            <button type="button" data-filter-group="documentStatus" data-filter-value="Documentation solide" aria-pressed="false">Solide</button>
+            <button type="button" data-filter-group="documentStatus" data-filter-value="Documentation partielle" aria-pressed="false">Partielle</button>
+          </fieldset>
+          <button class="filter-reset" type="button" data-filter-reset>Réinitialiser</button>
         </div>
+        <p class="search-status" aria-live="polite" data-case-status></p>
         <div class="case-directory" data-case-list></div>
+        <noscript>
+          <div class="case-directory">
+            <article class="observation-card project-card"><h2><a href="pdd-001-la-fayette/index.html">Lycée La Fayette</a></h2></article>
+            <article class="observation-card project-card"><h2><a href="pdd-002-teilhard-de-chardin/index.html">Collège Teilhard de Chardin</a></h2></article>
+            <article class="observation-card project-card"><h2><a href="pdd-003-rochefort-montagne/index.html">Lycée professionnel de Rochefort-Montagne</a></h2></article>
+            <article class="observation-card project-card"><h2><a href="pdd-004-combrailles/index.html">Lycée professionnel des Combrailles</a></h2></article>
+            <article class="observation-card project-card"><h2><a href="pdd-005-anatole-france/index.html">Centre Anatole-France</a></h2></article>
+          </div>
+        </noscript>
       </section>
     </main>
     <footer class="site-footer"><div class="footer-inner"><div><strong>Observatoire rénovation Auvergne</strong><span>Observer · documenter · analyser · mettre en contexte</span></div><a href="index.html">Projets d'Auvergne</a><a href="../methode/index.html">Méthode</a><a href="../acteurs/index.html">Acteurs</a><a href="../sources/index.html">Sources</a></div></footer>

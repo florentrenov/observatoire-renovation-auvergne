@@ -1,0 +1,68 @@
+[
+  {
+    "id": "PDD-004",
+    "title": "Lycée professionnel des Combrailles",
+    "status": "Projet bien documenté",
+    "documentStatus": "Documentation solide",
+    "confidence": "Sources institutionnelles multiples",
+    "score": 64,
+    "warnings": [
+      "date de vérification",
+      "montant",
+      "résultats mesurés"
+    ],
+    "imageRights": "aucune image dédiée contrôlée"
+  },
+  {
+    "id": "PDD-003",
+    "title": "Lycée professionnel de Rochefort-Montagne",
+    "status": "Projet bien documenté",
+    "documentStatus": "Documentation solide",
+    "confidence": "Sources institutionnelles multiples",
+    "score": 64,
+    "warnings": [
+      "date de vérification",
+      "montant",
+      "résultats mesurés"
+    ],
+    "imageRights": "aucune image dédiée contrôlée"
+  },
+  {
+    "id": "PDD-001",
+    "title": "Lycée La Fayette",
+    "status": "Opération documentée",
+    "documentStatus": "Projet documenté",
+    "confidence": "Sources institutionnelles",
+    "score": 88,
+    "warnings": [
+      "date de vérification"
+    ],
+    "imageRights": "image La Fayette à vérifier avant usage social global"
+  },
+  {
+    "id": "PDD-002",
+    "title": "Collège Teilhard de Chardin",
+    "status": "Opération en cours",
+    "documentStatus": "Documentation partielle",
+    "confidence": "Source institutionnelle unique",
+    "score": 66,
+    "warnings": [
+      "date de vérification",
+      "surface"
+    ],
+    "imageRights": "aucune image dédiée contrôlée"
+  },
+  {
+    "id": "PDD-005",
+    "title": "Centre Anatole-France",
+    "status": "Opération documentée",
+    "documentStatus": "Projet documenté",
+    "confidence": "Source institutionnelle locale",
+    "score": 76,
+    "warnings": [
+      "date de vérification",
+      "surface"
+    ],
+    "imageRights": "aucune image dédiée contrôlée"
+  }
+]

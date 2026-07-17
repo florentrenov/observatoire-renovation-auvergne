@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://florentrenov.github.io/observatoire-renovation-auvergne/sitemap.xml

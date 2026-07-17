@@ -1,0 +1,41 @@
+[
+  {
+    "path": "assets/hero-basalte.png",
+    "bytes": 2449144,
+    "format": "png",
+    "width": 1717,
+    "height": 916,
+    "usage": [],
+    "rights": "à documenter"
+  },
+  {
+    "path": "assets/hero-puy-de-dome-green.png",
+    "bytes": 2429358,
+    "format": "png",
+    "width": 1717,
+    "height": 916,
+    "usage": [
+      "acteurs-locaux/index.html",
+      "assets/styles.css",
+      "comprendre/index.html",
+      "habitat-prive/index.html",
+      "index.html",
+      "methode/index.html",
+      "observatoire/index.html",
+      "territoires/clermont-auvergne-metropole/index.html",
+      "territoires/puy-de-dome/index.html"
+    ],
+    "rights": "à documenter"
+  },
+  {
+    "path": "assets/projets-auvergne-la-fayette.webp",
+    "bytes": 57752,
+    "format": "webp",
+    "width": 580,
+    "height": 438,
+    "usage": [
+      "assets/styles.css"
+    ],
+    "rights": "à vérifier avant publication sociale"
+  }
+]

@@ -91,7 +91,7 @@ site-observatoire-v2/
     puy-de-dome/index.html
   documentation/
     index.html
-    renovation-globale/index.html
+    rénovation-globale/index.html
   veille/index.html
   methode/index.html
   recherche/index.html
@@ -106,7 +106,7 @@ site-observatoire-v2/
 - Accueil : `index.html`
 - Territoire exemple : `territoires/puy-de-dome/index.html`
 - Documentation : `documentation/index.html`
-- Fiche exemple : `documentation/renovation-globale/index.html`
+- Fiche exemple : `documentation/rénovation-globale/index.html`
 - Veille : `veille/index.html`
 - Méthode : `methode/index.html`
 - Recherche : `recherche/index.html`
