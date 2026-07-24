@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Cockpit des connaissances · Observatoire rénovation Auvergne</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="data/cockpit-data.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <header class="topbar">
+      <div class="topbar-identity">
+        <a href="../../index.html">Observatoire rénovation Auvergne</a>
+        <span aria-hidden="true">/</span>
+        <strong>Cockpit interne</strong>
+      </div>
+      <label class="global-search">
+        <span class="sr-only">Rechercher dans toute la base</span>
+        <input type="search" data-global-search placeholder="Rechercher une entité, relation, affirmation…" autocomplete="off">
+        <kbd>/</kbd>
+      </label>
+      <div class="topbar-actions">
+        <span class="readonly-badge">Lecture seule</span>
+        <button type="button" class="icon-button" data-print aria-label="Imprimer la vue">Imprimer</button>
+      </div>
+    </header>
+
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Vues du cockpit">
+        <div class="sidebar-head">
+          <span class="kicker">Phase 3.5</span>
+          <strong>Analyse & validation</strong>
+          <small data-generated-date></small>
+        </div>
+        <nav class="side-nav">
+          <button type="button" data-view="overview" aria-current="page"><span>01</span> Vue d'ensemble</button>
+          <button type="button" data-view="graph"><span>02</span> Graphe</button>
+          <button type="button" data-view="timeline"><span>03</span> Chronologie</button>
+          <button type="button" data-view="claims"><span>04</span> Affirmations</button>
+          <button type="button" data-view="quality"><span>05</span> Qualité</button>
+          <button type="button" data-view="sources"><span>06</span> Sources</button>
+          <button type="button" data-view="suggestions"><span>07</span> Suggestions</button>
+          <button type="button" data-view="matrices"><span>08</span> Matrices</button>
+          <button type="button" data-view="territories"><span>09</span> Territoires</button>
+          <button type="button" data-view="search"><span>10</span> Recherche</button>
+          <button type="button" data-view="gaps"><span>11</span> Lacunes</button>
+          <button type="button" data-view="comparison"><span>12</span> Comparaison</button>
+        </nav>
+        <div class="sidebar-foot">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span>Données validées<br><small>Aucune écriture autorisée</small></span>
+        </div>
+      </aside>
+
+      <main id="contenu" class="workspace" tabindex="-1">
+        <div class="breadcrumb" aria-label="Fil d'Ariane">
+          <a href="../../index.html">Observatoire</a><span>/</span><span>Cockpit</span><span>/</span><strong data-breadcrumb-view>Vue d'ensemble</strong>
+        </div>
+
+        <section class="view" data-section="overview">
+          <header class="view-head">
+            <div><span class="kicker">Diagnostic documentaire</span><h1>Vue d'ensemble</h1><p>État calculé du noyau de connaissances avant la veille pilote.</p></div>
+            <div class="view-meta"><span data-overview-date></span><strong>Référence Phase 3</strong></div>
+          </header>
+          <div data-overview></div>
+        </section>
+
+        <section class="view" data-section="graph" hidden>
+          <header class="view-head">
+            <div><span class="kicker">Exploration relationnelle</span><h1>Graphe de connaissances</h1><p>Les liens documentaires et les relations métier restent distingués.</p></div>
+            <div class="view-actions"><button type="button" data-graph-fullscreen>Plein écran</button><button type="button" data-export-subgraph>Exporter le sous-graphe</button></div>
+          </header>
+          <div class="preset-bar" data-graph-presets aria-label="Modes de lecture du graphe"></div>
+          <div class="filter-panel graph-filters">
+            <label>Recherche<input type="search" data-graph-search placeholder="Nom ou identifiant"></label>
+            <label>Type<select data-graph-type></select></label>
+            <label>Territoire<select data-graph-territory></select></label>
+            <label>Confiance<select data-graph-confidence></select></label>
+            <label>Statut<select data-graph-status></select></label>
+            <label>Source<select data-graph-source></select></label>
+            <label>Période<select data-graph-period></select></label>
+            <label>Temporalité<select data-graph-temporal></select></label>
+          </div>
+          <div class="result-line"><strong data-graph-count></strong><span>Maj + clic : sélection multiple</span><button type="button" data-graph-path disabled>Chemin entre les deux sélections</button></div>
+          <div class="graph-stage" data-graph-stage>
+            <svg data-graph role="img" aria-labelledby="graph-title graph-desc" viewBox="0 0 1600 1000">
+              <title id="graph-title">Graphe interactif de la base de connaissances</title>
+              <desc id="graph-desc">Nœuds d'entités, affirmations, publications et preuves reliés par des relations métier ou documentaires.</desc>
+              <g data-graph-viewport></g>
+            </svg>
+            <div class="graph-legend" data-graph-legend></div>
+            <div class="graph-controls"><button type="button" data-zoom-in aria-label="Zoomer">+</button><button type="button" data-zoom-out aria-label="Dézoomer">−</button><button type="button" data-graph-reset>Recentrer</button></div>
+          </div>
+          <div class="analysis-strip" data-graph-analysis></div>
+        </section>
+
+        <section class="view" data-section="timeline" hidden>
+          <header class="view-head"><div><span class="kicker">Lecture temporelle</span><h1>Chronologies</h1><p>Jalons canoniques, dates d'affirmations et publications thématiques.</p></div></header>
+          <div class="preset-bar" data-timeline-presets></div>
+          <div class="filter-panel">
+            <label>Entité<select data-timeline-entity></select></label>
+            <label>Source<select data-timeline-source></select></label>
+            <label>Statut<select data-timeline-status></select></label>
+            <label>Année<select data-timeline-year></select></label>
+            <label>Confiance<select data-timeline-confidence></select></label>
+          </div>
+          <div class="result-line"><strong data-timeline-count></strong><button type="button" data-export-view="timeline">Exporter CSV</button></div>
+          <div class="timeline" data-timeline></div>
+        </section>
+
+        <section class="view" data-section="claims" hidden>
+          <header class="view-head"><div><span class="kicker">Propositions vérifiables</span><h1>Affirmations documentées</h1><p>Une source déclarée ne garantit pas la présence d'une preuve primaire.</p></div></header>
+          <div class="filter-panel">
+            <label>Recherche<input type="search" data-claim-search placeholder="Sujet, texte, source…"></label>
+            <label>Statut<select data-claim-status></select></label>
+            <label>Confiance<select data-claim-confidence></select></label>
+            <label>Contrôle<select data-claim-control><option value="all">Tous</option><option value="no-primary">Source primaire absente</option><option value="overdue">Vérification dépassée</option><option value="future">Future</option><option value="sensitive">Sensible</option></select></label>
+          </div>
+          <div class="result-line"><strong data-claim-count></strong><button type="button" data-export-view="claims">Exporter CSV</button></div>
+          <div class="table-wrap"><table><thead><tr><th>Sujet</th><th>Prédicat</th><th>Objet</th><th>Affirmation</th><th>Statut</th><th>Confiance</th><th>Source primaire</th><th>Validité</th><th>Vérifiée</th></tr></thead><tbody data-claims></tbody></table></div>
+        </section>
+
+        <section class="view" data-section="quality" hidden>
+          <header class="view-head"><div><span class="kicker">Contrôle d'intégrité</span><h1>Qualité documentaire</h1><p>Les indicateurs mesurent la documentation disponible, pas la validité juridique.</p></div></header>
+          <div data-quality></div>
+        </section>
+
+        <section class="view" data-section="sources" hidden>
+          <header class="view-head"><div><span class="kicker">Qualification Phase 2.7</span><h1>Sources surveillées</h1><p>Une source observée et treize qualifications encore provisoires.</p></div></header>
+          <div class="filter-panel"><label>Recherche<input type="search" data-source-search placeholder="Nom, thème, territoire…"></label><label>Qualification<select data-source-status><option value="all">Toutes</option><option value="observed">Observée</option><option value="provisional">Provisoire</option></select></label><label>Fréquence<select data-source-frequency></select></label></div>
+          <div class="result-line"><strong data-source-count></strong><button type="button" data-export-view="sources">Exporter CSV</button></div>
+          <div class="table-wrap"><table><thead><tr><th>Source</th><th>Type / territoire</th><th>Priorité</th><th>Fréquence</th><th>Confiance</th><th>Bruit</th><th>Utilité</th><th>Temps</th><th>Qualification</th></tr></thead><tbody data-sources></tbody></table></div>
+          <div class="source-matrices" data-source-matrices></div>
+        </section>
+
+        <section class="view" data-section="suggestions" hidden>
+          <header class="view-head"><div><span class="kicker">File de décision</span><h1>Suggestions ANAH</h1><p>Aucune suggestion n'est acceptée, refusée ou appliquée depuis ce cockpit.</p></div></header>
+          <div class="readonly-notice"><strong>Lecture seule</strong><span>Les futures décisions devront être sécurisées, historisées et attribuées.</span></div>
+          <div class="filter-panel"><label>Recherche<input type="search" data-suggestion-search placeholder="Publication, cible, justification…"></label><label>Type<select data-suggestion-type></select></label><label>Statut<select data-suggestion-status></select></label><label>Priorité / confiance<select data-suggestion-priority><option value="all">Toutes</option><option value="high">Priorité haute</option><option value="low-confidence">Confiance faible</option></select></label></div>
+          <div class="result-line"><strong data-suggestion-count></strong><button type="button" data-export-view="suggestions">Exporter CSV</button></div>
+          <div class="table-wrap"><table><thead><tr><th>Publication</th><th>Type</th><th>Cible / champ</th><th>Valeur proposée</th><th>Justification</th><th>Confiance</th><th>Statut</th><th>Décision</th></tr></thead><tbody data-suggestions></tbody></table></div>
+        </section>
+
+        <section class="view" data-section="matrices" hidden>
+          <header class="view-head"><div><span class="kicker">Couverture croisée</span><h1>Matrices documentaires</h1><p>Une cellule vide signifie « non documenté », jamais « inexistant ».</p></div></header>
+          <div class="filter-panel"><label>Matrice<select data-matrix-select></select></label><label>Recherche<input type="search" data-matrix-search placeholder="Filtrer lignes et colonnes"></label><label>Cellules<select data-matrix-coverage><option value="all">Toutes</option><option value="filled">Renseignées</option><option value="empty">Vides</option></select></label><label>Tri<select data-matrix-sort><option value="label">Alphabétique</option><option value="density-desc">Plus documentées</option><option value="density-asc">Moins documentées</option></select></label></div>
+          <div class="result-line"><strong data-matrix-count></strong><button type="button" data-export-view="matrix">Exporter CSV</button></div>
+          <div data-matrix></div>
+        </section>
+
+        <section class="view" data-section="territories" hidden>
+          <header class="view-head"><div><span class="kicker">Hiérarchie documentaire</span><h1>Vue territoriale</h1><p>Première lecture sans carte ni coordonnées inventées.</p></div></header>
+          <div class="territory-layout" data-territories></div>
+        </section>
+
+        <section class="view" data-section="search" hidden>
+          <header class="view-head"><div><span class="kicker">Index transversal</span><h1>Recherche globale</h1><p>Noms, aliases, descriptions, relations, affirmations, événements, sources et suggestions.</p></div></header>
+          <label class="search-page-input"><span>Recherche</span><input type="search" data-search-page placeholder="Ex. MaPrimeRénov ANAH"></label>
+          <div class="result-line"><strong data-search-count></strong></div>
+          <div class="search-results" data-search-results></div>
+        </section>
+
+        <section class="view" data-section="gaps" hidden>
+          <header class="view-head"><div><span class="kicker">Travail restant</span><h1>Lacunes prioritaires</h1><p>Déductions explicables produites uniquement à partir des champs absents ou provisoires.</p></div></header>
+          <div class="filter-panel"><label>Priorité<select data-gap-priority><option value="all">Toutes</option><option value="critique">Critique</option><option value="haute">Haute</option><option value="moyenne">Moyenne</option><option value="faible">Faible</option></select></label><label>Catégorie<select data-gap-category></select></label><label>Recherche<input type="search" data-gap-search placeholder="Identifiant ou explication"></label></div>
+          <div class="result-line"><strong data-gap-count></strong><button type="button" data-export-view="gaps">Exporter CSV</button></div>
+          <div data-gaps></div>
+        </section>
+
+        <section class="view" data-section="comparison" hidden>
+          <header class="view-head"><div><span class="kicker">Évolution du noyau</span><h1>Comparaison temporelle</h1><p>Photographie de référence Phase 3 confrontée à la génération courante.</p></div></header>
+          <div data-comparison></div>
+        </section>
+      </main>
+    </div>
+
+    <aside class="detail-panel" data-detail hidden aria-labelledby="detail-title">
+      <header><div><span class="kicker" data-detail-kind>Détail</span><h2 id="detail-title" data-detail-title>Élément</h2></div><button type="button" data-detail-close aria-label="Fermer le panneau">Fermer</button></header>
+      <div class="detail-body" data-detail-body></div>
+    </aside>
+    <div class="toast" data-toast hidden role="status" aria-live="polite"></div>
+    <noscript><p class="noscript">Le cockpit nécessite JavaScript pour filtrer et explorer les données locales.</p></noscript>
+  </body>
+</html>

@@ -17,6 +17,14 @@
     "site:obsidian:dry-run": "node scripts/obsidian-export-dry-run.mjs --check",
     "site:media": "node scripts/media-inventory.mjs",
     "site:visual:check": "node scripts/visual-check.mjs",
-    "site:public:compare": "node scripts/public-compare.mjs"
+    "site:public:compare": "node scripts/public-compare.mjs",
+    "identity:check": "node scripts/validate-project-identities.mjs",
+    "public:build": "node scripts/build-public.mjs",
+    "public:verify": "node scripts/verify-public.mjs",
+    "public:accessibility": "node scripts/accessibility-check.mjs",
+    "public:determinism": "node scripts/test-public-determinism.mjs",
+    "rollback:test": "node scripts/test-rollback.mjs",
+    "preview:serve": "node scripts/serve-preview.mjs",
+    "release:check": "npm run site:check && npm run identity:check && npm run public:determinism && npm run public:build && npm run public:accessibility && node scripts/verify-public.mjs --record"
   }
 }

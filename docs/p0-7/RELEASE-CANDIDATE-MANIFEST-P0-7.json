@@ -1,0 +1,82 @@
+{
+  "schemaVersion": "1.0.0",
+  "candidate": "P0.8-editorial-legal-option-b",
+  "branch": "codex/cloture-p0-6",
+  "publicSourceCommit": "f12ed37c011abaa77c84b6a56be35d30db5c04b6",
+  "generatedAt": "2026-07-22T10:03:44.682Z",
+  "artifactSha256": "9eb81cbb4e248b25644d5a36d6a39e27b5edc5d7f0971840d1372f78f1acf573",
+  "pages": {
+    "sitemapPages": 60,
+    "htmlFiles": 61,
+    "utilityPages": 1
+  },
+  "projects": {
+    "count": 5,
+    "publishedIds": ["PDD-001", "PDD-002", "PDD-003", "PDD-004", "PDD-005"],
+    "frozenIds": ["PDD-006", "PDD-007", "PDD-008", "PDD-009"]
+  },
+  "sitemapUrlCount": 60,
+  "searchEntryCount": 60,
+  "tests": {
+    "lockedInstall": "passed",
+    "releaseCheck": "passed",
+    "siteCheck": "passed_with_2_documented_warnings",
+    "seo": "passed",
+    "searchQueries": "12_passed_with_truncation_public_scope_and_visual_structure_regressions",
+    "identityRegistry": "passed_9_ids_4_frozen",
+    "determinism": "passed_with_cross_platform_line_ending_normalization",
+    "publicBuild": "passed",
+    "publicAccessibility": "passed_61_html_4_contrast_pairs",
+    "publicVerify": "passed",
+    "negativePublicationTests": "10_of_10_passed",
+    "rollback": "passed",
+    "localFonts": "5_woff2_from_official_repositories_with_ofl_and_sha256_passed",
+    "externalFontCalls": "0_passed",
+    "unlicensedMediaInArtifact": "0_passed",
+    "mobile": ["390x844_technical_preview_passed", "human_revalidation_passed_for_option_b_scope"],
+    "assistedVisualChecks": "option_b_pages_legal_page_and_footer_passed_technical_and_human_review",
+    "withoutJavaScript": "passed_for_p0_6_candidate"
+  },
+  "githubActionsWorkflow": {
+    "status": "prepared_not_activated",
+    "trigger": "manual_workflow_dispatch",
+    "deployRef": "refs/heads/main_only",
+    "node": "22",
+    "install": "npm_ci_ignore_scripts",
+    "artifactPath": "./dist",
+    "pagesActions": ["configure-pages@v5", "upload-pages-artifact@v4", "deploy-pages@v4"]
+  },
+  "hotfix": {
+    "branch": "codex/hotfix-retrait-routes-internes",
+    "commit": "ee03091500e5f1c1bb7472fa9f257d5722ceac33",
+    "status": "ready_with_conditions_not_deployed",
+    "artifactSha256": "968d8e40e1681f6d4787652bbac9b49447cb069cddd26ca987fc8238aeebcd62"
+  },
+  "humanReview": "visual_revalidation_complete_after_option_b",
+  "humanReviewScope": ["option_b_affected_pages", "legal_page", "desktop_mobile_footer"],
+  "humanValidator": "Florent",
+  "humanValidationDate": "2026-07-22",
+  "humanValidationComment": "Préversions locales examinées en version desktop et mobile. Les remplacements graphiques CSS sont cohérents avec la charte Basalte, Cendre et Lave. La page Mentions légales et confidentialité et le lien de pied de page sont lisibles et correctement intégrés. Les trois médias non documentés sont absents de l’artefact public et les polices sont auto-hébergées. Revalidation visuelle P0.8 Option B accordée.",
+  "editorialLegalInformation": "validated_in_principle_targeted_external_checks_pending",
+  "editorialLegalValidator": "Florent",
+  "editorialLegalValidationDate": "2026-07-22",
+  "targetedExternalLegalChecks": [
+    "publisher professional or non-professional qualification",
+    "ability not to publish a personal address",
+    "exact GitHub Pages hosting notice",
+    "final reuse terms"
+  ],
+  "residualWarnings": [
+    "PDD-003: measured post-work results are not published by the available sources",
+    "PDD-004: measured post-work results are not published by the available sources"
+  ],
+  "residualRisks": [
+    "production internal analysis and watch routes remain accessible until an authorized hotfix or full release is deployed",
+    "GitHub Pages source has not been switched to GitHub Actions",
+    "four targeted external legal checks remain open and the deployment date placeholder is intentionally unset",
+    "the release manifest remains unsigned",
+    "complete artifact replacement remains to be confirmed by post-deployment HTTP checks"
+  ],
+  "recommendation": "TARGETED_LEGAL_CHECKS_AND_EXPLICIT_RELEASE_AUTHORIZATION_REQUIRED_BEFORE_GO_FINAL",
+  "decision": "human_approval_required"
+}

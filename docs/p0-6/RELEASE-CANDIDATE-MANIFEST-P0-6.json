@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0.0",
+  "candidate": "P0.6",
+  "publicSourceCommit": "bead360af9dc2156a2ba4dae9967322adc68ab1a",
+  "branch": "codex/cloture-p0-6",
+  "generatedAt": "2026-07-21T20:23:00Z",
+  "artifactSha256": "10018bce954ae61b8b562a7ca6cc1d35bf68fcf41cc8f8bda8f7a6ac71c5763e",
+  "pages": {
+    "sitemapPages": 59,
+    "htmlFiles": 60,
+    "utilityPages": 1
+  },
+  "projects": {
+    "count": 5,
+    "publishedIds": ["PDD-001", "PDD-002", "PDD-003", "PDD-004", "PDD-005"],
+    "frozenIds": ["PDD-006", "PDD-007", "PDD-008", "PDD-009"]
+  },
+  "sitemapUrlCount": 59,
+  "searchEntryCount": 59,
+  "tests": {
+    "releaseCheck": "passed",
+    "siteCheck": "passed_with_2_documented_warnings",
+    "seo": "passed",
+    "searchQueries": "12_passed",
+    "identityRegistry": "passed_9_ids_4_frozen",
+    "determinism": "passed",
+    "publicBuild": "passed",
+    "publicAccessibility": "passed_60_html_4_contrast_pairs",
+    "publicVerify": "passed",
+    "negativePublicationTests": "10_of_10_passed",
+    "rollback": "passed",
+    "interactive": "passed"
+  },
+  "residualWarnings": [
+    "PDD-003: measured post-work results are not published by the available sources",
+    "PDD-004: measured post-work results are not published by the available sources"
+  ],
+  "accessibilityVerified": [
+    "skip_link",
+    "heading_hierarchy",
+    "targeted_color_contrast",
+    "static_main_content_without_javascript"
+  ],
+  "interactiveDimensions": ["360x800", "390x844", "768x1024"],
+  "humanReview": "pending",
+  "legalEditorialInventory": "complete_inventory_validation_required",
+  "githubPages": {
+    "currentMechanism": "branch_based_jekyll_build_strongly_observed_admin_source_not_confirmed",
+    "requiredBeforeMerge": "switch_pages_source_to_github_actions",
+    "preparedMechanism": "manual_dist_only_artifact_workflow"
+  },
+  "productionCockpitRisk": "high_separate_hotfix_recommended",
+  "recommendation": "GO_TECHNIQUE",
+  "decision": "human_approval_required"
+}

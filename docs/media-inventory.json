@@ -14,17 +14,7 @@
     "format": "png",
     "width": 1717,
     "height": 916,
-    "usage": [
-      "acteurs-locaux/index.html",
-      "assets/styles.css",
-      "comprendre/index.html",
-      "habitat-prive/index.html",
-      "index.html",
-      "methode/index.html",
-      "observatoire/index.html",
-      "territoires/clermont-auvergne-metropole/index.html",
-      "territoires/puy-de-dome/index.html"
-    ],
+    "usage": [],
     "rights": "à documenter"
   },
   {
@@ -33,9 +23,88 @@
     "format": "webp",
     "width": 580,
     "height": 438,
-    "usage": [
-      "assets/styles.css"
-    ],
+    "usage": [],
     "rights": "à vérifier avant publication sociale"
+  },
+  {
+    "path": "docs/p0-6/preuves/captures/404-360x800.png",
+    "bytes": 27118,
+    "format": "png",
+    "width": 345,
+    "height": 767,
+    "usage": [],
+    "rights": "à documenter"
+  },
+  {
+    "path": "docs/p0-6/preuves/captures/accueil-360x800.png",
+    "bytes": 45008,
+    "format": "png",
+    "width": 345,
+    "height": 767,
+    "usage": [],
+    "rights": "à documenter"
+  },
+  {
+    "path": "docs/p0-6/preuves/captures/accueil-768x1024.png",
+    "bytes": 105113,
+    "format": "png",
+    "width": 753,
+    "height": 1004,
+    "usage": [],
+    "rights": "à documenter"
+  },
+  {
+    "path": "docs/p0-6/preuves/captures/accueil-desktop-1440x1000.png",
+    "bytes": 162769,
+    "format": "png",
+    "width": 1425,
+    "height": 990,
+    "usage": [],
+    "rights": "à documenter"
+  },
+  {
+    "path": "docs/p0-6/preuves/captures/lien-evitement-focus-360x800.png",
+    "bytes": 45776,
+    "format": "png",
+    "width": 345,
+    "height": 767,
+    "usage": [],
+    "rights": "à documenter"
+  },
+  {
+    "path": "docs/p0-6/preuves/captures/pdd-001-360x800.png",
+    "bytes": 31555,
+    "format": "png",
+    "width": 345,
+    "height": 767,
+    "usage": [],
+    "rights": "à documenter"
+  },
+  {
+    "path": "docs/p0-6/preuves/captures/pdd-001-desktop-1440x1000.png",
+    "bytes": 73301,
+    "format": "png",
+    "width": 1425,
+    "height": 990,
+    "usage": [],
+    "rights": "à documenter"
+  },
+  {
+    "path": "docs/p0-6/preuves/captures/recherche-spl-oser-390x844.png",
+    "bytes": 34253,
+    "format": "png",
+    "width": 375,
+    "height": 812,
+    "usage": [],
+    "rights": "à documenter"
+  },
+  {
+    "path": "docs/p0-6/preuves/captures/sources-360x800.png",
+    "bytes": 28385,
+    "format": "png",
+    "width": 345,
+    "height": 767,
+    "usage": [],
+    "rights": "à documenter"
   }
 ]

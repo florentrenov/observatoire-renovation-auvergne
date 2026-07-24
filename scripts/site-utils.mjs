@@ -33,7 +33,7 @@ export const FORBIDDEN_HEADER_LABELS = [
 ];
 
 export function isInternalLab(relativePath) {
-  return relativePath === "veille-automatique/index.html" || relativePath.startsWith("analyse-connaissances/");
+  return relativePath.startsWith("internal/") || relativePath === "veille-automatique/index.html" || relativePath.startsWith("analyse-connaissances/");
 }
 
 export function toPosix(value) {
@@ -46,7 +46,7 @@ export function relativeToSite(file) {
 
 export function walk(dir = SITE_ROOT, files = []) {
   for (const entry of readdirSync(dir, { withFileTypes: true })) {
-    if (entry.name === "node_modules" || entry.name === ".git") continue;
+    if (["node_modules", ".git", "dist", ".release-cache"].includes(entry.name)) continue;
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) {
       walk(full, files);
@@ -98,8 +98,8 @@ export function extractTagContent(html, tag) {
 }
 
 export function extractAttribute(tag, attr) {
-  const match = tag.match(new RegExp(`${attr}=["']([^"']+)["']`, "i"));
-  return match ? decodeEntities(match[1]) : "";
+  const match = tag.match(new RegExp(`${attr}=(["'])(.*?)\\1`, "i"));
+  return match ? decodeEntities(match[2]) : "";
 }
 
 export function localHrefTarget(fromFile, rawUrl) {

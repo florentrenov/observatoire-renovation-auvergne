@@ -1,0 +1,42 @@
+.error-page .page-head {
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+}
+
+.error-code {
+  color: var(--ocre-auvergne);
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(72px, 18vw, 180px);
+  line-height: 0.8;
+  opacity: 0.28;
+}
+
+.error-actions {
+  margin-top: 30px;
+}
+
+.history-back {
+  min-height: 44px;
+  border: 1px solid var(--line-strong);
+  border-radius: 3px;
+  padding: 9px 12px;
+  background: transparent;
+  color: var(--cendre);
+  font: inherit;
+  cursor: pointer;
+}
+
+.history-back:hover {
+  border-color: var(--ocre-auvergne);
+}
+
+@media (max-width: 620px) {
+  .error-page .page-head {
+    grid-template-columns: 1fr;
+  }
+
+  .error-code {
+    order: -1;
+    font-size: 72px;
+  }
+}

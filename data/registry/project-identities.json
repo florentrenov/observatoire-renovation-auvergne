@@ -1,0 +1,163 @@
+{
+  "schemaVersion": "1.0.0",
+  "policy": {
+    "immutableIds": true,
+    "reuseForbidden": true,
+    "ambiguousIdsArePublishable": false,
+    "humanDecisionRequiredForStatusChange": true,
+    "allowedStatuses": [
+      "actif",
+      "brouillon",
+      "gele",
+      "ambigu",
+      "remplace",
+      "fusionne",
+      "archive",
+      "non_publiable"
+    ]
+  },
+  "entries": [
+    {
+      "id": "PDD-001",
+      "canonicalSlug": "pdd-001-la-fayette",
+      "canonicalName": "Lycée La Fayette",
+      "aliases": [],
+      "status": "actif",
+      "publicationStatus": "public",
+      "createdAt": null,
+      "lastVerifiedAt": null,
+      "replacedIdentity": null,
+      "successorId": null,
+      "changeReason": null,
+      "decisionSource": "public repository at aaa7862b85c842345bf339f1d2e83af2d1f3402b"
+    },
+    {
+      "id": "PDD-002",
+      "canonicalSlug": "pdd-002-teilhard-de-chardin",
+      "canonicalName": "Collège Teilhard de Chardin",
+      "aliases": [],
+      "status": "actif",
+      "publicationStatus": "public",
+      "createdAt": null,
+      "lastVerifiedAt": null,
+      "replacedIdentity": null,
+      "successorId": null,
+      "changeReason": null,
+      "decisionSource": "public repository at aaa7862b85c842345bf339f1d2e83af2d1f3402b"
+    },
+    {
+      "id": "PDD-003",
+      "canonicalSlug": "pdd-003-rochefort-montagne",
+      "canonicalName": "Lycée professionnel de Rochefort-Montagne",
+      "aliases": [],
+      "status": "actif",
+      "publicationStatus": "public",
+      "createdAt": null,
+      "lastVerifiedAt": null,
+      "replacedIdentity": null,
+      "successorId": null,
+      "changeReason": null,
+      "decisionSource": "public repository at aaa7862b85c842345bf339f1d2e83af2d1f3402b"
+    },
+    {
+      "id": "PDD-004",
+      "canonicalSlug": "pdd-004-combrailles",
+      "canonicalName": "Lycée professionnel des Combrailles",
+      "aliases": [],
+      "status": "actif",
+      "publicationStatus": "public",
+      "createdAt": null,
+      "lastVerifiedAt": null,
+      "replacedIdentity": null,
+      "successorId": null,
+      "changeReason": null,
+      "decisionSource": "public repository at aaa7862b85c842345bf339f1d2e83af2d1f3402b"
+    },
+    {
+      "id": "PDD-005",
+      "canonicalSlug": "pdd-005-anatole-france",
+      "canonicalName": "Centre Anatole-France",
+      "aliases": [],
+      "status": "actif",
+      "publicationStatus": "public",
+      "createdAt": null,
+      "lastVerifiedAt": null,
+      "replacedIdentity": null,
+      "successorId": null,
+      "changeReason": null,
+      "decisionSource": "public repository at aaa7862b85c842345bf339f1d2e83af2d1f3402b"
+    },
+    {
+      "id": "PDD-006",
+      "canonicalSlug": null,
+      "canonicalName": null,
+      "aliases": [],
+      "status": "ambigu",
+      "publicationStatus": "non_publiable",
+      "createdAt": null,
+      "lastVerifiedAt": "2026-07-21",
+      "replacedIdentity": null,
+      "successorId": null,
+      "changeReason": "Deux opérations réelles distinctes partagent cet identifiant dans les sources locales.",
+      "decisionSource": "human arbitration pending",
+      "candidates": [
+        { "name": "Groupe scolaire Alphonse-Daudet", "place": "Clermont-Ferrand", "owner": "Ville de Clermont-Ferrand", "sourceLayer": "vault", "sourcePath": "07-Batiments/Operations/PDD-006-Groupe-scolaire-Alphonse-Daudet-Clermont-Ferrand.md" },
+        { "name": "Collège Le Pavin", "place": "Besse-et-Saint-Anastaise", "owner": "Département du Puy-de-Dôme", "sourceLayer": "local-site-v2", "sourcePath": "assets/observatoire.js" }
+      ]
+    },
+    {
+      "id": "PDD-007",
+      "canonicalSlug": null,
+      "canonicalName": null,
+      "aliases": [],
+      "status": "ambigu",
+      "publicationStatus": "non_publiable",
+      "createdAt": null,
+      "lastVerifiedAt": "2026-07-21",
+      "replacedIdentity": null,
+      "successorId": null,
+      "changeReason": "Deux opérations réelles distinctes partagent cet identifiant dans les sources locales.",
+      "decisionSource": "human arbitration pending",
+      "candidates": [
+        { "name": "Groupe scolaire Jules-Vallès", "place": "Clermont-Ferrand", "owner": "Ville de Clermont-Ferrand", "sourceLayer": "vault", "sourcePath": "07-Batiments/Operations/PDD-007-Groupe-scolaire-Jules-Valles-Clermont-Ferrand.md" },
+        { "name": "Collège La Durolle", "place": "La Monnerie-le-Montel", "owner": "Département du Puy-de-Dôme", "sourceLayer": "local-site-v2", "sourcePath": "assets/observatoire.js" }
+      ]
+    },
+    {
+      "id": "PDD-008",
+      "canonicalSlug": null,
+      "canonicalName": null,
+      "aliases": [],
+      "status": "ambigu",
+      "publicationStatus": "non_publiable",
+      "createdAt": null,
+      "lastVerifiedAt": "2026-07-21",
+      "replacedIdentity": null,
+      "successorId": null,
+      "changeReason": "L’identifiant a été réutilisé explicitement pour une opération distincte et entre en conflit avec le site local.",
+      "decisionSource": "human arbitration pending",
+      "candidates": [
+        { "name": "Nouvelle école Les Volcans", "place": "Issoire", "owner": "Ville d’Issoire", "sourceLayer": "vault", "sourcePath": "07-Batiments/Operations/PDD-008-Ecole-Les-Volcans-Issoire.md", "previousSourceId": "PDD-019" },
+        { "name": "Collège des Ancizes", "place": "Les Ancizes-Comps", "owner": "Département du Puy-de-Dôme", "sourceLayer": "local-site-v2", "sourcePath": "assets/observatoire.js" }
+      ]
+    },
+    {
+      "id": "PDD-009",
+      "canonicalSlug": null,
+      "canonicalName": null,
+      "aliases": [],
+      "status": "ambigu",
+      "publicationStatus": "non_publiable",
+      "createdAt": null,
+      "lastVerifiedAt": "2026-07-21",
+      "replacedIdentity": null,
+      "successorId": null,
+      "changeReason": "L’identifiant a été réutilisé explicitement pour une opération distincte et entre en conflit avec le site local.",
+      "decisionSource": "human arbitration pending",
+      "candidates": [
+        { "name": "Bâtiments Défi-Mode", "place": "Thiers", "owner": "Ville de Thiers", "sourceLayer": "vault", "sourcePath": "07-Batiments/Operations/PDD-009-Batiments-Defi-Mode-Thiers.md", "previousSourceId": "PDD-020" },
+        { "name": "Collège Anatole France", "place": "Gerzat", "owner": "Département du Puy-de-Dôme", "sourceLayer": "local-site-v2", "sourcePath": "assets/observatoire.js" }
+      ]
+    }
+  ]
+}

@@ -18,7 +18,7 @@ function classify(rel, title, h1, outgoing, incoming) {
   if (rel.startsWith("etudes-de-cas/")) return "public-principal";
   if (["veille/index.html", "acteurs/index.html", "sources/index.html", "a-propos/index.html"].includes(rel)) return "public-principal";
   if (rel === "methode/index.html") return "transparence";
-  if (rel === "veille-automatique/index.html" || rel.startsWith("analyse-connaissances/")) return "laboratoire-interne";
+  if (rel.startsWith("internal/") || rel === "veille-automatique/index.html" || rel.startsWith("analyse-connaissances/")) return "laboratoire-interne";
   if (rel.startsWith("veille/")) return "public-utile";
   if (["observatoire/index.html", "recherche/index.html"].includes(rel)) return "public-secondaire";
   if (["analyses/index.html", "techniques/index.html", "territoires/index.html"].includes(rel)) return "a-examiner";

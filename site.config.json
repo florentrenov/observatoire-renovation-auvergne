@@ -3,7 +3,6 @@
   "siteName": "Observatoire rénovation Auvergne",
   "defaultDescription": "Observatoire territorial de la rénovation énergétique en Auvergne : projets observés, acteurs, sources et documentation.",
   "indexExcluded": [
-    "veille-automatique/",
-    "analyse-connaissances/"
+    "internal/"
   ]
 }

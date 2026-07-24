@@ -67,8 +67,10 @@ La V2 renforce trois idées :
 ## 3. Changements implémentés
 
 - Nouveau dossier autonome `site-observatoire-v2`.
-- Nouveau visuel héro bitmap : `assets/hero-puy-de-dome-green.png`.
-- Ancien visuel minéral conservé en archive de travail : `assets/hero-basalte.png`.
+- Traitements héro et minéraux reconstruits en CSS dans la palette Basalte, Cendre et Lave.
+- Les trois médias raster sans preuve documentaire suffisante restent des archives locales de travail et sont exclus de l'artefact public.
+- Polices Fraunces et IBM Plex auto-hébergées depuis leurs dépôts officiels, avec licences OFL et provenance documentées dans `assets/fonts/SOURCES.txt`.
+- Page publique `mentions-legales/index.html` et lien correspondant dans chaque pied de page.
 - Accueil reconstruit autour d'un héro plein écran.
 - Hiérarchie typographique renforcée.
 - Navigation plus discrète et plus institutionnelle.
@@ -83,10 +85,18 @@ La V2 renforce trois idées :
 ```text
 site-observatoire-v2/
   index.html
+  mentions-legales/index.html
   assets/
     styles.css
-    hero-basalte.png
-    hero-puy-de-dome-green.png
+    fonts/
+      fraunces-variable.woff2
+      ibm-plex-mono-400.woff2
+      ibm-plex-sans-400.woff2
+      ibm-plex-sans-500.woff2
+      ibm-plex-sans-600.woff2
+      OFL-Fraunces.txt
+      OFL-IBM-Plex.txt
+      SOURCES.txt
   territoires/
     puy-de-dome/index.html
   documentation/

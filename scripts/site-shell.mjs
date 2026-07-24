@@ -49,9 +49,24 @@ function footerFor(rel, oldFooter) {
   let footer = oldFooter.replace(/<a\b[^>]*href=["'][^"']*methode\/index\.html["'][^>]*>[\s\S]*?<\/a>/gi, "");
   footer = footer.replace(/<span\b[^>]*class=["'][^"']*\bfooter-status\b[^"']*["'][^>]*>/i, `<a href="${methodHref}">Méthode</a><span class="footer-status"`);
   if (!footer.includes(`href="${methodHref}"`)) {
-    footer = footer.replace("</div></footer>", `<a href="${methodHref}">Méthode</a></div></footer>`);
+    footer = footer.replace(/<\/div>\s*<\/footer>$/i, `<a href="${methodHref}">Méthode</a></div></footer>`);
   }
   return footer;
+}
+
+function skipLinkFor() {
+  return `<a class="skip-link" href="#contenu">Aller au contenu principal</a>`;
+}
+
+function applyAccessibilityShell(html) {
+  let next = html;
+  if (!/<main\b[^>]*\bid=["']contenu["']/i.test(next)) {
+    next = next.replace(/<main\b([^>]*)>/i, `<main id="contenu"$1>`);
+  }
+  if (!/<a\b[^>]*class=["'][^"']*\bskip-link\b[^"']*["']/i.test(next)) {
+    next = next.replace(/(<body\b[^>]*>)/i, `$1\n    ${skipLinkFor()}`);
+  }
+  return next;
 }
 
 const changed = [];
@@ -78,11 +93,16 @@ for (const file of htmlFiles()) {
     const methodLinks = [...footerMatches[0][0].matchAll(/<a\b[^>]*href=["'][^"']*methode\/index\.html["'][^>]*>([\s\S]*?)<\/a>/gi)]
       .filter((match) => labelsFromLinks(match[0]).join("").toLowerCase().includes("méthode"));
     if (methodLinks.length !== 1) failures.push(`${rel}: lien Méthode footer non conforme`);
+    const skipLinks = [...html.matchAll(/<a\b[^>]*class=["'][^"']*\bskip-link\b[^"']*["'][^>]*href=["']#contenu["'][^>]*>/gi)];
+    if (skipLinks.length !== 1) failures.push(`${rel}: lien d'évitement non conforme`);
+    const mainTargets = [...html.matchAll(/<main\b[^>]*\bid=["']contenu["'][^>]*>/gi)];
+    if (mainTargets.length !== 1) failures.push(`${rel}: cible #contenu non conforme`);
     continue;
   }
 
   let next = html.replace(headerMatches[0][0], headerFor(rel, headerMatches[0][0]));
   next = next.replace(footerMatches[0][0], footerFor(rel, footerMatches[0][0]));
+  next = applyAccessibilityShell(next);
   if (next !== html) {
     changed.push(rel);
     writeFileSync(file, next, "utf8");

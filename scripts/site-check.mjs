@@ -108,6 +108,7 @@ function runLinksCheck() {
   const failures = [];
   for (const file of htmlFiles()) {
     const rel = relativeToSite(file);
+    if (isInternalLab(rel)) continue;
     const html = readUtf8(file);
     const ids = anchorsIn(html);
     const refs = [

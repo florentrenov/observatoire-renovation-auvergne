@@ -64,6 +64,13 @@ const cases = [
 ];
 
 const failures = [];
+const truncatedDescriptions = index.filter((item) => /\b(?:de l|[cdjlmnst])$/iu.test(String(item.description || "").trim()));
+for (const item of truncatedDescriptions) failures.push(`${item.url}: description de recherche potentiellement tronquée: "${item.description}"`);
+const techniquesEntry = index.find((item) => item.url === "techniques/index.html");
+if (!techniquesEntry?.description.includes("cinq projets publiés")) failures.push("techniques/index.html: périmètre des cinq projets publiés absent de la description");
+if (/dix premières opérations|dix premieres operations/iu.test(`${techniquesEntry?.title || ""} ${techniquesEntry?.description || ""} ${techniquesEntry?.text || ""}`)) failures.push("techniques/index.html: ancien périmètre de dix opérations encore visible");
+const analysesEntry = index.find((item) => item.url === "analyses/index.html");
+if (/passer de 10|approfondir les A\/B|garder les C\/D|laboratoire/iu.test(`${analysesEntry?.title || ""} ${analysesEntry?.description || ""} ${analysesEntry?.text || ""}`)) failures.push("analyses/index.html: ancien périmètre de travail encore visible");
 for (const [query, expectedFirst] of cases) {
   const results = search(query);
   const urls = new Set();
